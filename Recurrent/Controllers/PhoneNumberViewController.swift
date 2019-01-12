@@ -20,6 +20,12 @@ class PhoneNumberViewController: UIViewController {
     
     @IBOutlet weak var continueButton: UIButton!
     
+    @IBAction func chooseCountry(_ sender: UIButton) {
+        configurePickerView()
+    }
+    
+    var countryPickerView = UIPickerView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +38,7 @@ class PhoneNumberViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
+    // MARK: - UI configuration
     func configureUI() {
         continueButton.roundCorners(radius: 3)
         continueButton.layer.masksToBounds = false
@@ -40,4 +47,102 @@ class PhoneNumberViewController: UIViewController {
                                        opacity: 0.5,
                                        radius: 5)
     }
+    
+    func configurePickerView() {
+        self.countryPickerView = UIPickerView(frame: CGRect(x: 0,
+                                                            y: self.view.frame.size.height - 216 + 36,
+                                                       width: self.view.frame.size.width,
+                                                       height: 216 - 36))
+        countryPickerView.showsSelectionIndicator = true
+        countryPickerView.delegate = self
+        countryPickerView.dataSource = self
+        countryPickerView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        
+        // ToolBar
+        let toolBar = UIToolbar(frame: CGRect(x: 0,
+                                              y: self.view.frame.size.height - 216,
+                                              width: self.view.frame.size.width,
+                                              height: 36))
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = #colorLiteral(red: 0.3089829385, green: 0.6156063676, blue: 0.9604739547, alpha: 1)
+
+        // Adding ToolBar Buttons
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneClick))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelClick))
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        self.view.addSubview(countryPickerView)
+        self.view.addSubview(toolBar)
+    }
+    
+    @objc func doneClick() {
+        let countryCode = countryPickerView.selectedRow(inComponent: 0)
+        countryCodeButton.setTitle("+" + String(countryCode), for: .normal)
+        countryPickerView.resignFirstResponder()
+    }
+    
+    @objc func cancelClick() {
+        countryPickerView.resignFirstResponder()
+    }
+}
+
+// MARK: - Countries Codes definition
+extension PhoneNumberViewController {
+    enum Countries: Int {
+        case ukraine
+        case usa
+        case checkRepublic
+        case japan
+        case uk
+        case mexico
+        case australia
+        
+        var name: String {
+            switch self {
+            case .ukraine: return "Ukraine"
+            case .usa: return "USA"
+            case .checkRepublic: return "Check Republic"
+            case .japan: return "Japan"
+            case .uk: return "UK"
+            case .mexico: return "Mexico"
+            case .australia: return "Australia"
+            }
+        }
+        
+        var phoneCode: Int {
+            switch self {
+            case .ukraine: return 380
+            case .usa: return 1
+            case .checkRepublic: return 420
+            case .japan: return 81
+            case .uk: return 44
+            case .mexico: return 52
+            case .australia: return 61
+            }
+        }
+    }
+}
+
+// MARK: - UIPickerViewDelegate, UIPickerViewDataSource
+extension PhoneNumberViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return Countries.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let country = Countries.getCases()[row]
+        return "+" + String(country.phoneCode) + " " + country.name
+    }
+    
+//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//        let countryCode = Countries.getCases()[row].phoneCode
+//        countryCodeButton.setTitle("+" + String(countryCode), for: .normal)
+//    }
 }

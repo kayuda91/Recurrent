@@ -62,6 +62,7 @@
 		5F73EA9321E5BC91004E0680 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F73EA8621E5BC91004E0680 /* Roboto-Black.ttf */; };
 		5F73EA9621E5BE69004E0680 /* UIView+Corners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73EA9521E5BE69004E0680 /* UIView+Corners.swift */; };
 		5F73EA9821E5C000004E0680 /* CALayer+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73EA9721E5C000004E0680 /* CALayer+Shadow.swift */; };
+		5F73EA9C21E9BBCE004E0680 /* Enum+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73EA9B21E9BBCE004E0680 /* Enum+RawRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +123,7 @@
 		5F73EA8621E5BC91004E0680 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		5F73EA9521E5BE69004E0680 /* UIView+Corners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Corners.swift"; sourceTree = "<group>"; };
 		5F73EA9721E5C000004E0680 /* CALayer+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Shadow.swift"; sourceTree = "<group>"; };
+		5F73EA9B21E9BBCE004E0680 /* Enum+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enum+RawRepresentable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 			children = (
 				5F73EA9521E5BE69004E0680 /* UIView+Corners.swift */,
 				5F73EA9721E5C000004E0680 /* CALayer+Shadow.swift */,
+				5F73EA9B21E9BBCE004E0680 /* Enum+RawRepresentable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				5F73EA3421E47D73004E0680 /* PhoneNumberViewController.swift in Sources */,
 				5F73EA2621E4628B004E0680 /* Recurrent.xcdatamodeld in Sources */,
 				5F73EA9621E5BE69004E0680 /* UIView+Corners.swift in Sources */,
+				5F73EA9C21E9BBCE004E0680 /* Enum+RawRepresentable.swift in Sources */,
 				5F73EA2021E4628B004E0680 /* ViewController.swift in Sources */,
 				5F73EA1E21E4628B004E0680 /* AppDelegate.swift in Sources */,
 				5F73EA9821E5C000004E0680 /* CALayer+Shadow.swift in Sources */,
