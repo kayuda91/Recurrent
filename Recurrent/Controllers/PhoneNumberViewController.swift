@@ -27,10 +27,17 @@ class PhoneNumberViewController: UIViewController {
     var countryPickerView = UIPickerView()
     var countryPickerToolbar = UIToolbar()
     
+    var selectedCountry = Countries.getCases()[0] {
+        didSet {
+            countryCodeButton.setTitle("+" + String(selectedCountry.phoneCode), for: .normal)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureUI()
+        hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,13 +89,15 @@ class PhoneNumberViewController: UIViewController {
     @objc func doneClick() {
         let selectedRow = countryPickerView.selectedRow(inComponent: 0)
         let sortedCountries = Countries.getCases().sorted {$0.name < $1.name}
-        let countryCode = sortedCountries[selectedRow].phoneCode
-        countryCodeButton.setTitle("+" + String(countryCode), for: .normal)
-        countryPickerToolbar.removeFromSuperview()
-        countryPickerView.removeFromSuperview()
+        selectedCountry = sortedCountries[selectedRow]
+        removeCountryPicker()
     }
     
     @objc func cancelClick() {
+        removeCountryPicker()
+    }
+    
+    func removeCountryPicker() {
         countryPickerToolbar.removeFromSuperview()
         countryPickerView.removeFromSuperview()
     }
@@ -128,6 +137,32 @@ extension PhoneNumberViewController {
             case .australia: return 61
             }
         }
+        
+        var numberLength: Int {
+            switch self {
+            case .ukraine, .checkRepublic:
+                return 9
+            case .usa, .japan, .mexico, .uk, .australia:
+                return 10
+            }
+        }
+    }
+}
+
+// MARK: - UITextFieldDelegate
+extension PhoneNumberViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        removeCountryPicker()
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let inputNumber = textField.text else {
+            return false
+        }
+        
+        let shouldChangeCharacter = !(inputNumber.count >= selectedCountry.numberLength && range.length == 0)
+        if !shouldChangeCharacter { textField.resignFirstResponder() }
+        return shouldChangeCharacter
     }
 }
 
