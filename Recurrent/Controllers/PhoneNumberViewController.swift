@@ -25,6 +25,7 @@ class PhoneNumberViewController: UIViewController {
     }
     
     var countryPickerView = UIPickerView()
+    var countryPickerToolbar = UIToolbar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,33 +60,37 @@ class PhoneNumberViewController: UIViewController {
         countryPickerView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
         // ToolBar
-        let toolBar = UIToolbar(frame: CGRect(x: 0,
+        countryPickerToolbar = UIToolbar(frame: CGRect(x: 0,
                                               y: self.view.frame.size.height - 216,
                                               width: self.view.frame.size.width,
                                               height: 36))
-        toolBar.barStyle = .default
-        toolBar.isTranslucent = true
-        toolBar.tintColor = #colorLiteral(red: 0.3089829385, green: 0.6156063676, blue: 0.9604739547, alpha: 1)
+        countryPickerToolbar.barStyle = .default
+        countryPickerToolbar.isTranslucent = true
+        countryPickerToolbar.tintColor = #colorLiteral(red: 0.3089829385, green: 0.6156063676, blue: 0.9604739547, alpha: 1)
 
         // Adding ToolBar Buttons
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneClick))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelClick))
-        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
-        toolBar.isUserInteractionEnabled = true
+        countryPickerToolbar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        countryPickerToolbar.isUserInteractionEnabled = true
         
         self.view.addSubview(countryPickerView)
-        self.view.addSubview(toolBar)
+        self.view.addSubview(countryPickerToolbar)
     }
     
     @objc func doneClick() {
-        let countryCode = countryPickerView.selectedRow(inComponent: 0)
+        let selectedRow = countryPickerView.selectedRow(inComponent: 0)
+        let sortedCountries = Countries.getCases().sorted {$0.name < $1.name}
+        let countryCode = sortedCountries[selectedRow].phoneCode
         countryCodeButton.setTitle("+" + String(countryCode), for: .normal)
-        countryPickerView.resignFirstResponder()
+        countryPickerToolbar.removeFromSuperview()
+        countryPickerView.removeFromSuperview()
     }
     
     @objc func cancelClick() {
-        countryPickerView.resignFirstResponder()
+        countryPickerToolbar.removeFromSuperview()
+        countryPickerView.removeFromSuperview()
     }
 }
 
@@ -137,12 +142,8 @@ extension PhoneNumberViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let country = Countries.getCases()[row]
+        let sortedCountries = Countries.getCases().sorted {$0.name < $1.name}
+        let country = sortedCountries[row]
         return "+" + String(country.phoneCode) + " " + country.name
     }
-    
-//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        let countryCode = Countries.getCases()[row].phoneCode
-//        countryCodeButton.setTitle("+" + String(countryCode), for: .normal)
-//    }
 }
