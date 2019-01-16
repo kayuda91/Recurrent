@@ -150,8 +150,9 @@
                         <outlet property="countryCodeButton" destination="MN2-SR-4wF" id="FBU-j9-o7I"/>
                         <outlet property="countryScoreUnderlineLabel" destination="BHJ-c4-GKI" id="Deu-Ft-ygX"/>
                         <outlet property="countryTitleLabel" destination="ImG-j7-Ahj" id="sPy-a3-hk7"/>
+                        <outlet property="countryUnderlineLabel" destination="BHJ-c4-GKI" id="6Yj-Py-jiM"/>
                         <outlet property="phoneNumberTitleLabel" destination="JYc-Mm-tPX" id="G1J-KS-l57"/>
-                        <outlet property="phoneNumberUnderlineLabel" destination="LIz-BV-oN1" id="CWw-1A-Koo"/>
+                        <outlet property="phoneNumberUnderlineLabel" destination="LIz-BV-oN1" id="nCW-mV-VpX"/>
                         <outlet property="phoneNumbertextField" destination="LzU-EA-q8p" id="wuZ-UK-kD6"/>
                     </connections>
                 </viewController>

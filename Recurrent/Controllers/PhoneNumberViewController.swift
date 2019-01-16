@@ -13,14 +13,16 @@ class PhoneNumberViewController: UIViewController {
     @IBOutlet weak var countryScoreUnderlineLabel: UILabel!
     @IBOutlet weak var countryCodeButton: UIButton!
     @IBOutlet weak var countryTitleLabel: UILabel!
+    @IBOutlet weak var countryUnderlineLabel: UILabel!
     
-    @IBOutlet weak var phoneNumberUnderlineLabel: UILabel!
     @IBOutlet weak var phoneNumbertextField: UITextField!
     @IBOutlet weak var phoneNumberTitleLabel: UILabel!
+    @IBOutlet weak var phoneNumberUnderlineLabel: UILabel!
     
     @IBOutlet weak var continueButton: UIButton!
     
     @IBAction func chooseCountry(_ sender: UIButton) {
+        isPhoneNumberFieldSelected = false
         configurePickerView()
     }
     
@@ -30,6 +32,16 @@ class PhoneNumberViewController: UIViewController {
     var selectedCountry = Countries.getCases()[0] {
         didSet {
             countryCodeButton.setTitle("+" + String(selectedCountry.phoneCode), for: .normal)
+        }
+    }
+    
+    var isPhoneNumberFieldSelected = true {
+        didSet {
+            countryTitleLabel.textColor = isPhoneNumberFieldSelected ? #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1) : #colorLiteral(red: 0.2509803922, green: 0.5333333333, blue: 0.9490196078, alpha: 1)
+            countryUnderlineLabel.backgroundColor = isPhoneNumberFieldSelected ? #colorLiteral(red: 0.8196078431, green: 0.8196078431, blue: 0.8196078431, alpha: 1) : #colorLiteral(red: 0.2509803922, green: 0.5333333333, blue: 0.9490196078, alpha: 1)
+            
+            phoneNumberTitleLabel.textColor = !isPhoneNumberFieldSelected ? #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1) : #colorLiteral(red: 0.2509803922, green: 0.5333333333, blue: 0.9490196078, alpha: 1)
+            phoneNumberUnderlineLabel.backgroundColor = !isPhoneNumberFieldSelected ? #colorLiteral(red: 0.8196078431, green: 0.8196078431, blue: 0.8196078431, alpha: 1) : #colorLiteral(red: 0.2509803922, green: 0.5333333333, blue: 0.9490196078, alpha: 1)
         }
     }
     
@@ -44,6 +56,7 @@ class PhoneNumberViewController: UIViewController {
         super.viewWillAppear(animated)
         
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        phoneNumbertextField.becomeFirstResponder()
     }
     
     // MARK: - UI configuration
@@ -66,7 +79,6 @@ class PhoneNumberViewController: UIViewController {
         countryPickerView.dataSource = self
         countryPickerView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
-        // ToolBar
         countryPickerToolbar = UIToolbar(frame: CGRect(x: 0,
                                               y: self.view.frame.size.height - 216,
                                               width: self.view.frame.size.width,
@@ -152,6 +164,8 @@ extension PhoneNumberViewController {
 // MARK: - UITextFieldDelegate
 extension PhoneNumberViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        isPhoneNumberFieldSelected = true
+        phoneNumberTitleLabel.isHidden = textField.text?.count ?? 0 < 1
         removeCountryPicker()
     }
     
@@ -160,6 +174,7 @@ extension PhoneNumberViewController: UITextFieldDelegate {
             return false
         }
         
+        phoneNumberTitleLabel.isHidden = range.location < 1 && string == ""
         let shouldChangeCharacter = !(inputNumber.count >= selectedCountry.numberLength && range.length == 0)
         if !shouldChangeCharacter { textField.resignFirstResponder() }
         return shouldChangeCharacter
