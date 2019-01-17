@@ -21,11 +21,6 @@ class PhoneNumberViewController: UIViewController {
     
     @IBOutlet weak var continueButton: UIButton!
     
-    @IBAction func chooseCountry(_ sender: UIButton) {
-        isPhoneNumberFieldSelected = false
-        configurePickerView()
-    }
-    
     var countryPickerView = UIPickerView()
     var countryPickerToolbar = UIToolbar()
     
@@ -50,13 +45,24 @@ class PhoneNumberViewController: UIViewController {
 
         configureUI()
         hideKeyboardWhenTappedAround()
+        phoneNumbertextField.becomeFirstResponder()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        phoneNumbertextField.becomeFirstResponder()
+    }
+    
+    // MARK: - @IBAction
+    @IBAction func chooseCountry(_ sender: UIButton) {
+        isPhoneNumberFieldSelected = false
+        configurePickerView()
+    }
+    
+    @IBAction func continueRegistration(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PasscodeViewController")
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     // MARK: - UI configuration
@@ -87,7 +93,6 @@ class PhoneNumberViewController: UIViewController {
         countryPickerToolbar.isTranslucent = true
         countryPickerToolbar.tintColor = #colorLiteral(red: 0.3089829385, green: 0.6156063676, blue: 0.9604739547, alpha: 1)
 
-        // Adding ToolBar Buttons
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneClick))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelClick))
