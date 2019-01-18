@@ -8,14 +8,14 @@
 
 import UIKit
 
-class PersonalDetailsTableViewCell: UITableViewCell {
+class PersonalDetailsTableViewCell: UITableViewCell, NibReusable {
     
     @IBOutlet private weak var detailsLabel: UILabel!
     @IBOutlet private weak var detailsTextField: UITextField!
     
-    var label: String? {
+    var title: String? {
         didSet {
-            detailsLabel.text = label ?? ""
+            detailsLabel.text = title ?? ""
         }
     }
     

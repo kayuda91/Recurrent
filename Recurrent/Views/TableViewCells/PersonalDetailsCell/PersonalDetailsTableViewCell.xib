@@ -26,20 +26,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Test" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YKV-Hg-lNS">
-                        <rect key="frame" x="42" y="27.5" width="236" height="22"/>
+                        <rect key="frame" x="31" y="27.5" width="258" height="22"/>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="18"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HpR-HM-WFm" userLabel="SeperatorLine">
-                        <rect key="frame" x="42" y="53.5" width="236" height="1"/>
+                        <rect key="frame" x="31" y="53.5" width="258" height="1"/>
                         <color key="backgroundColor" red="0.81960784313725488" green="0.81960784313725488" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="Xfp-1O-XwX"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Legal first name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQO-4B-Q7A">
-                        <rect key="frame" x="42" y="4.5" width="236" height="17"/>
+                        <rect key="frame" x="31" y="4.5" width="258" height="17"/>
                         <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
                         <color key="textColor" red="0.51764705882352946" green="0.51764705882352946" blue="0.51764705882352946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -52,10 +52,10 @@
                     <constraint firstItem="DQO-4B-Q7A" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" id="T6P-45-LtU"/>
                     <constraint firstItem="HpR-HM-WFm" firstAttribute="top" secondItem="YKV-Hg-lNS" secondAttribute="bottom" constant="4" id="VKS-hn-ox4"/>
                     <constraint firstAttribute="bottom" secondItem="HpR-HM-WFm" secondAttribute="bottom" id="cwp-wx-31h"/>
-                    <constraint firstItem="HpR-HM-WFm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="26" id="gTT-C3-Won"/>
+                    <constraint firstItem="HpR-HM-WFm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="gTT-C3-Won"/>
                     <constraint firstItem="YKV-Hg-lNS" firstAttribute="top" secondItem="DQO-4B-Q7A" secondAttribute="bottom" constant="6" id="kAA-g0-wOe"/>
                     <constraint firstItem="YKV-Hg-lNS" firstAttribute="leading" secondItem="HpR-HM-WFm" secondAttribute="leading" id="p3X-oF-Ui8"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="HpR-HM-WFm" secondAttribute="trailing" constant="26" id="zlq-MK-xMu"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="HpR-HM-WFm" secondAttribute="trailing" constant="15" id="zlq-MK-xMu"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

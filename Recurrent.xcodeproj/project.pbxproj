@@ -12,6 +12,7 @@
 		5F301D6221F1B28700A2E2A4 /* PersonalDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F301D6021F1B28700A2E2A4 /* PersonalDetailsTableViewCell.xib */; };
 		5F301D6621F1B6B200A2E2A4 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301D6521F1B6B200A2E2A4 /* NibLoadable.swift */; };
 		5F301D6821F1B6FD00A2E2A4 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301D6721F1B6FD00A2E2A4 /* Reusable.swift */; };
+		5F301D6A21F1B90C00A2E2A4 /* ReusableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301D6921F1B90C00A2E2A4 /* ReusableTableView.swift */; };
 		5F73EA1E21E4628B004E0680 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73EA1D21E4628B004E0680 /* AppDelegate.swift */; };
 		5F73EA2021E4628B004E0680 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73EA1F21E4628B004E0680 /* ViewController.swift */; };
 		5F73EA2321E4628B004E0680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F73EA2121E4628B004E0680 /* Main.storyboard */; };
@@ -78,6 +79,7 @@
 		5F301D6021F1B28700A2E2A4 /* PersonalDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		5F301D6521F1B6B200A2E2A4 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		5F301D6721F1B6FD00A2E2A4 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		5F301D6921F1B90C00A2E2A4 /* ReusableTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTableView.swift; sourceTree = "<group>"; };
 		5F73EA1A21E4628B004E0680 /* Recurrent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recurrent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F73EA1D21E4628B004E0680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F73EA1F21E4628B004E0680 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			children = (
 				5F301D6521F1B6B200A2E2A4 /* NibLoadable.swift */,
 				5F301D6721F1B6FD00A2E2A4 /* Reusable.swift */,
+				5F301D6921F1B90C00A2E2A4 /* ReusableTableView.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				5F301D5B21F1AC3E00A2E2A4 /* PersonalDetailsViewController.swift in Sources */,
 				5F73EA2621E4628B004E0680 /* Recurrent.xcdatamodeld in Sources */,
 				5F73EA9621E5BE69004E0680 /* UIView+Corners.swift in Sources */,
+				5F301D6A21F1B90C00A2E2A4 /* ReusableTableView.swift in Sources */,
 				5F301D6121F1B28700A2E2A4 /* PersonalDetailsTableViewCell.swift in Sources */,
 				5F73EA9C21E9BBCE004E0680 /* Enum+RawRepresentable.swift in Sources */,
 				5F301D6821F1B6FD00A2E2A4 /* Reusable.swift in Sources */,
