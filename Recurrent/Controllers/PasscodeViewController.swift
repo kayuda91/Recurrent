@@ -34,6 +34,10 @@ class PasscodeViewController: UIViewController {
         }
         
         updateFilledPasscodeCircles()
+        
+        if passcode.count == 4 {
+            navigateToPersonalDetailsScreen()
+        }
     }
     
     // MARK: - UI Configuration
@@ -56,5 +60,11 @@ class PasscodeViewController: UIViewController {
         for i in filledPasscodeStackview.subviews.indices {
             filledPasscodeStackview.subviews[i].backgroundColor = i < passcode.count ? #colorLiteral(red: 0.2509803922, green: 0.5333333333, blue: 0.9490196078, alpha: 1) : #colorLiteral(red: 0.7843137255, green: 0.8549019608, blue: 0.968627451, alpha: 1)
         }
+    }
+    
+    // MARK: - Navigation
+    func navigateToPersonalDetailsScreen() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PersonalDetailsViewController")
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

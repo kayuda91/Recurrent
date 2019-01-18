@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F301D5B21F1AC3E00A2E2A4 /* PersonalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301D5A21F1AC3E00A2E2A4 /* PersonalDetailsViewController.swift */; };
+		5F301D6121F1B28700A2E2A4 /* PersonalDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301D5F21F1B28700A2E2A4 /* PersonalDetailsTableViewCell.swift */; };
+		5F301D6221F1B28700A2E2A4 /* PersonalDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F301D6021F1B28700A2E2A4 /* PersonalDetailsTableViewCell.xib */; };
+		5F301D6621F1B6B200A2E2A4 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301D6521F1B6B200A2E2A4 /* NibLoadable.swift */; };
+		5F301D6821F1B6FD00A2E2A4 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301D6721F1B6FD00A2E2A4 /* Reusable.swift */; };
 		5F73EA1E21E4628B004E0680 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73EA1D21E4628B004E0680 /* AppDelegate.swift */; };
 		5F73EA2021E4628B004E0680 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73EA1F21E4628B004E0680 /* ViewController.swift */; };
 		5F73EA2321E4628B004E0680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F73EA2121E4628B004E0680 /* Main.storyboard */; };
@@ -68,6 +73,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F301D5A21F1AC3E00A2E2A4 /* PersonalDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailsViewController.swift; sourceTree = "<group>"; };
+		5F301D5F21F1B28700A2E2A4 /* PersonalDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		5F301D6021F1B28700A2E2A4 /* PersonalDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		5F301D6521F1B6B200A2E2A4 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		5F301D6721F1B6FD00A2E2A4 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		5F73EA1A21E4628B004E0680 /* Recurrent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recurrent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F73EA1D21E4628B004E0680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F73EA1F21E4628B004E0680 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +151,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F301D5C21F1B20000A2E2A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5F301D5D21F1B21300A2E2A4 /* TableViewCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5F301D5D21F1B21300A2E2A4 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				5F301D5E21F1B24C00A2E2A4 /* PersonalDetailsCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		5F301D5E21F1B24C00A2E2A4 /* PersonalDetailsCell */ = {
+			isa = PBXGroup;
+			children = (
+				5F301D5F21F1B28700A2E2A4 /* PersonalDetailsTableViewCell.swift */,
+				5F301D6021F1B28700A2E2A4 /* PersonalDetailsTableViewCell.xib */,
+			);
+			path = PersonalDetailsCell;
+			sourceTree = "<group>";
+		};
+		5F301D6321F1B64900A2E2A4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5F301D6421F1B65800A2E2A4 /* Reusable */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5F301D6421F1B65800A2E2A4 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				5F301D6521F1B6B200A2E2A4 /* NibLoadable.swift */,
+				5F301D6721F1B6FD00A2E2A4 /* Reusable.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
 		5F73EA1121E4628B004E0680 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +214,8 @@
 			children = (
 				5F73EA9421E5BE3F004E0680 /* Extensions */,
 				5F73EA3221E479A1004E0680 /* Controllers */,
+				5F301D5C21F1B20000A2E2A4 /* Views */,
+				5F301D6321F1B64900A2E2A4 /* Protocols */,
 				5F73EA1D21E4628B004E0680 /* AppDelegate.swift */,
 				5F73EA1F21E4628B004E0680 /* ViewController.swift */,
 				5F73EA2121E4628B004E0680 /* Main.storyboard */,
@@ -179,6 +233,7 @@
 			children = (
 				5F73EA3321E47D73004E0680 /* PhoneNumberViewController.swift */,
 				5F73EA9F21F03705004E0680 /* PasscodeViewController.swift */,
+				5F301D5A21F1AC3E00A2E2A4 /* PersonalDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -361,6 +416,7 @@
 				5F73EA8B21E5BC91004E0680 /* Roboto-ThinItalic.ttf in Resources */,
 				5F73EA5B21E5B9CB004E0680 /* FiraSans-Light.otf in Resources */,
 				5F73EA6121E5B9CB004E0680 /* FiraSans-BookItalic.otf in Resources */,
+				5F301D6221F1B28700A2E2A4 /* PersonalDetailsTableViewCell.xib in Resources */,
 				5F73EA6321E5B9CB004E0680 /* FiraSans-FourItalic.otf in Resources */,
 				5F73EA6D21E5B9CB004E0680 /* FiraSans-ExtraLightItalic.otf in Resources */,
 				5F73EA7621E5B9CB004E0680 /* FiraSans-ExtraBold.otf in Resources */,
@@ -381,12 +437,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F73EA3421E47D73004E0680 /* PhoneNumberViewController.swift in Sources */,
+				5F301D5B21F1AC3E00A2E2A4 /* PersonalDetailsViewController.swift in Sources */,
 				5F73EA2621E4628B004E0680 /* Recurrent.xcdatamodeld in Sources */,
 				5F73EA9621E5BE69004E0680 /* UIView+Corners.swift in Sources */,
+				5F301D6121F1B28700A2E2A4 /* PersonalDetailsTableViewCell.swift in Sources */,
 				5F73EA9C21E9BBCE004E0680 /* Enum+RawRepresentable.swift in Sources */,
+				5F301D6821F1B6FD00A2E2A4 /* Reusable.swift in Sources */,
 				5F73EAA021F03705004E0680 /* PasscodeViewController.swift in Sources */,
 				5F73EA9E21EF05B8004E0680 /* UIViewController+Gestures.swift in Sources */,
 				5F73EA2021E4628B004E0680 /* ViewController.swift in Sources */,
+				5F301D6621F1B6B200A2E2A4 /* NibLoadable.swift in Sources */,
 				5F73EA1E21E4628B004E0680 /* AppDelegate.swift in Sources */,
 				5F73EA9821E5C000004E0680 /* CALayer+Shadow.swift in Sources */,
 			);
