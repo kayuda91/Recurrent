@@ -19,6 +19,7 @@ class PersonalDetailsViewController: UIViewController {
         
         configureUI()
         configureTableView()
+        hideKeyboardWhenTappedAround()
     }
     
     // MARK: - @IBAction
@@ -74,6 +75,11 @@ extension PersonalDetailsViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath, with: PersonalDetailsTableViewCell.self)
         cell.title = detailsSections[indexPath.section].title
+        
+        cell.textFieldEndEditing = { text in
+            //TODO: Save info
+        }
+        
         return cell
     }
     

@@ -19,8 +19,18 @@ class PersonalDetailsTableViewCell: UITableViewCell, NibReusable {
         }
     }
     
+    var textFieldEndEditing: ((String) -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        detailsTextField.delegate = self
+    }
+}
+
+// MARK: - UITextFieldDelegate
+extension PersonalDetailsTableViewCell: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textFieldEndEditing?(textField.text ?? "")
     }
 }
