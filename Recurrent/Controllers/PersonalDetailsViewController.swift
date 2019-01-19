@@ -28,7 +28,7 @@ class PersonalDetailsViewController: UIViewController {
     }
     
     @IBAction func continueRegistration(_ sender: UIButton) {
-        //TODO: Push next VC
+        navigateToHomeAddressScreen()
     }
     
      // MARK: - UI Configuration
@@ -45,9 +45,15 @@ class PersonalDetailsViewController: UIViewController {
     func configureTableView() {
         tableView.register(PersonalDetailsTableViewCell.self)
     }
+    
+    // MARK: - Navigation
+    func navigateToHomeAddressScreen() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeAddressViewController")
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
-// MARK: - Rows definition
+// MARK: - Section definition
 extension PersonalDetailsViewController {
     enum DetailsSectionType: Int {
         case firstName
