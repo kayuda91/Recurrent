@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -491,7 +492,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are your personal details?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Kc1-iz-J2C">
-                                <rect key="frame" x="53.5" y="89" width="268" height="51.5"/>
+                                <rect key="frame" x="53.5" y="89" width="268" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="268" id="7di-K9-5qe"/>
                                 </constraints>
@@ -500,7 +501,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1e0-GG-YWg">
-                                <rect key="frame" x="0.0" y="200.5" width="375" height="317.5"/>
+                                <rect key="frame" x="0.0" y="202" width="375" height="316"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -600,7 +601,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your home address?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="ZxQ-Dl-0UM">
-                                <rect key="frame" x="37.5" y="94" width="300" height="26"/>
+                                <rect key="frame" x="37.5" y="94" width="300" height="26.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="kae-UZ-GcQ"/>
                                 </constraints>
@@ -623,7 +624,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7f8-71-KpM">
-                                <rect key="frame" x="0.0" y="180" width="375" height="338"/>
+                                <rect key="frame" x="0.0" y="180.5" width="375" height="337.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="lC1-e0-8Z5" id="6fu-aD-ogo"/>
@@ -657,6 +658,95 @@
             </objects>
             <point key="canvasLocation" x="3265" y="-564"/>
         </scene>
+        <!--Reg Confirmation View Controller-->
+        <scene sceneID="BFr-Wc-sT7">
+            <objects>
+                <viewController storyboardIdentifier="RegConfirmationViewController" id="gwQ-A8-ndk" customClass="RegConfirmationViewController" customModule="Recurrent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M1e-KZ-yvA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uiA-Da-L1a">
+                                <rect key="frame" x="25" y="578" width="325" height="57"/>
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.53333333329999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="9H2-fu-mpJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="18"/>
+                                <state key="normal" title="Got it">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmRegistration:" destination="gwQ-A8-ndk" eventType="touchUpInside" id="HRA-lq-uFs"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelopes" translatesAutoresizingMaskIntoConstraints="NO" id="zcl-8u-C4g">
+                                <rect key="frame" x="87.5" y="70" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zcl-8u-C4g" secondAttribute="height" multiplier="1:1" id="uw2-N7-67x"/>
+                                    <constraint firstAttribute="width" constant="200" id="y0V-Zo-I5D"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recurrent is in huge demand" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="W4o-TG-Bmu">
+                                <rect key="frame" x="37.5" y="320" width="300" height="26.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="2jt-bA-I61"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="22"/>
+                                <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="spw-FB-XHR">
+                                <rect key="frame" x="24" y="371.5" width="327" height="86.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="327" id="yRW-82-8SS"/>
+                                </constraints>
+                                <string key="text">You will be one of the first people to get early access to Recurrent as soon as the app is ready. The average time on the queue is about 10 days</string>
+                                <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="18"/>
+                                <color key="textColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="reI-mc-vEG" firstAttribute="trailing" secondItem="uiA-Da-L1a" secondAttribute="trailing" constant="25" id="DHD-Hp-L4K"/>
+                            <constraint firstItem="spw-FB-XHR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="reI-mc-vEG" secondAttribute="leading" constant="10" id="DNP-m0-Li2"/>
+                            <constraint firstItem="spw-FB-XHR" firstAttribute="top" secondItem="W4o-TG-Bmu" secondAttribute="bottom" constant="25" id="aVy-AI-Ou3"/>
+                            <constraint firstItem="zcl-8u-C4g" firstAttribute="centerX" secondItem="M1e-KZ-yvA" secondAttribute="centerX" id="c6C-pD-9jK"/>
+                            <constraint firstItem="uiA-Da-L1a" firstAttribute="top" relation="greaterThanOrEqual" secondItem="spw-FB-XHR" secondAttribute="bottom" constant="5" id="e8R-wX-L6P"/>
+                            <constraint firstItem="reI-mc-vEG" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="spw-FB-XHR" secondAttribute="trailing" constant="10" id="fAu-0u-AYM"/>
+                            <constraint firstItem="reI-mc-vEG" firstAttribute="bottom" secondItem="uiA-Da-L1a" secondAttribute="bottom" constant="32" id="gXb-Ek-kZ6"/>
+                            <constraint firstItem="spw-FB-XHR" firstAttribute="centerX" secondItem="M1e-KZ-yvA" secondAttribute="centerX" id="igd-Vo-Qpt"/>
+                            <constraint firstItem="W4o-TG-Bmu" firstAttribute="centerX" secondItem="M1e-KZ-yvA" secondAttribute="centerX" id="moG-os-AUt"/>
+                            <constraint firstItem="zcl-8u-C4g" firstAttribute="top" secondItem="reI-mc-vEG" secondAttribute="top" constant="50" id="r23-7I-tKD"/>
+                            <constraint firstItem="W4o-TG-Bmu" firstAttribute="top" secondItem="zcl-8u-C4g" secondAttribute="bottom" constant="50" id="rP5-AC-wt9"/>
+                            <constraint firstItem="uiA-Da-L1a" firstAttribute="leading" secondItem="reI-mc-vEG" secondAttribute="leading" constant="25" id="wMm-lM-NCU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="reI-mc-vEG"/>
+                    </view>
+                    <connections>
+                        <outlet property="gotItButton" destination="uiA-Da-L1a" id="GH7-l6-XCq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RuZ-YN-8je" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3960" y="-567"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nmv-6C-Zdv">
+            <objects>
+                <viewController id="312-wz-pfX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VTx-6x-6De">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="GXb-ed-wRq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fud-DE-0kQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4650" y="-567"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fuc-Iu-B3f">
             <objects>
@@ -679,5 +769,6 @@
     <resources>
         <image name="backArrow" width="22" height="16"/>
         <image name="downArrow" width="12" height="7"/>
+        <image name="envelopes" width="200" height="200"/>
     </resources>
 </document>

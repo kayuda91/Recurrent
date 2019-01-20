@@ -61,8 +61,7 @@ class PhoneNumberViewController: UIViewController {
     }
     
     @IBAction func continueRegistration(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PasscodeViewController")
-        navigationController?.pushViewController(vc, animated: true)
+        navigateToPersonalDetailsController()
     }
     
     // MARK: - UI configuration
@@ -117,6 +116,12 @@ class PhoneNumberViewController: UIViewController {
     func removeCountryPicker() {
         countryPickerToolbar.removeFromSuperview()
         countryPickerView.removeFromSuperview()
+    }
+    
+    // MARK: - Navigation
+    func navigateToPersonalDetailsController() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PasscodeViewController")
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

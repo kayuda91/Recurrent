@@ -35,7 +35,7 @@ class HomeAddressViewController: UIViewController {
     }
     
     @IBAction func continueRegistration(_ sender: UIButton) {
-        //TODO: Navigate to next VC
+        navigateToRegConfirmationVC()
     }
     
     // MARK: - UI Configuration
@@ -101,6 +101,12 @@ class HomeAddressViewController: UIViewController {
     func removePicker() {
         pickerToolbar.removeFromSuperview()
         pickerView.removeFromSuperview()
+    }
+    
+    // MARK: - Navigation
+    func navigateToRegConfirmationVC() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RegConfirmationViewController")
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     // MARK: - TableView configuration
