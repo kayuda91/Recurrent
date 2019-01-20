@@ -10,12 +10,18 @@ import UIKit
 
 class PersonalDetailsTableViewCell: UITableViewCell, NibReusable {
     
+    @IBOutlet weak var detailsTextField: UITextField!
     @IBOutlet private weak var detailsLabel: UILabel!
-    @IBOutlet private weak var detailsTextField: UITextField!
     
     var title: String? {
         didSet {
             detailsLabel.text = title ?? ""
+        }
+    }
+    
+    var inputValue: String? {
+        didSet {
+            detailsTextField.text = inputValue ?? ""
         }
     }
     
@@ -25,6 +31,13 @@ class PersonalDetailsTableViewCell: UITableViewCell, NibReusable {
         super.awakeFromNib()
         
         detailsTextField.delegate = self
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        title = ""
+        inputValue = ""
     }
 }
 

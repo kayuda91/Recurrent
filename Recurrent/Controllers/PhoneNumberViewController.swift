@@ -120,52 +120,6 @@ class PhoneNumberViewController: UIViewController {
     }
 }
 
-// MARK: - Countries Codes definition
-extension PhoneNumberViewController {
-    enum Countries: Int {
-        case ukraine
-        case usa
-        case checkRepublic
-        case japan
-        case uk
-        case mexico
-        case australia
-        
-        var name: String {
-            switch self {
-            case .ukraine: return "Ukraine"
-            case .usa: return "USA"
-            case .checkRepublic: return "Check Republic"
-            case .japan: return "Japan"
-            case .uk: return "UK"
-            case .mexico: return "Mexico"
-            case .australia: return "Australia"
-            }
-        }
-        
-        var phoneCode: Int {
-            switch self {
-            case .ukraine: return 380
-            case .usa: return 1
-            case .checkRepublic: return 420
-            case .japan: return 81
-            case .uk: return 44
-            case .mexico: return 52
-            case .australia: return 61
-            }
-        }
-        
-        var numberLength: Int {
-            switch self {
-            case .ukraine, .checkRepublic:
-                return 9
-            case .usa, .japan, .mexico, .uk, .australia:
-                return 10
-            }
-        }
-    }
-}
-
 // MARK: - UITextFieldDelegate
 extension PhoneNumberViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
