@@ -13,7 +13,7 @@ class RegConfirmationViewController: UIViewController {
     
     // MARK: - @IBAction
     @IBAction func confirmRegistration(_ sender: UIButton) {
-        //TODO: Navigate to next VC
+        showQueueInfoVC()
     }
     
     override func viewDidLoad() {
@@ -33,5 +33,8 @@ class RegConfirmationViewController: UIViewController {
     }
     
     // MARK: - Navigation
-    
+    func showQueueInfoVC() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QueueInfoViewController")
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

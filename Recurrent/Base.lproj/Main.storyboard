@@ -732,20 +732,135 @@
             </objects>
             <point key="canvasLocation" x="3960" y="-567"/>
         </scene>
-        <!--View Controller-->
+        <!--Queue Info View Controller-->
         <scene sceneID="nmv-6C-Zdv">
             <objects>
-                <viewController id="312-wz-pfX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QueueInfoViewController" id="312-wz-pfX" customClass="QueueInfoViewController" customModule="Recurrent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VTx-6x-6De">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XN0-4E-FZm">
+                                <rect key="frame" x="0.0" y="20" width="375" height="792"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQT-xk-3ug" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paymentMethods" translatesAutoresizingMaskIntoConstraints="NO" id="gJa-Lo-GYr">
+                                                <rect key="frame" x="87" y="50" width="200" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="gJa-Lo-GYr" secondAttribute="height" multiplier="1:1" id="5k1-qo-FP9"/>
+                                                    <constraint firstAttribute="width" constant="200" id="9hz-kU-HI4"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You're on the list, Anton!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="dJS-03-4dP">
+                                                <rect key="frame" x="37.5" y="300" width="300" height="26.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="300" id="0UB-5H-Lg0"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="22"/>
+                                                <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="74,949" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="FTu-hb-Dtm">
+                                                <rect key="frame" x="101" y="351.5" width="173" height="77"/>
+                                                <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="64"/>
+                                                <color key="textColor" red="0.25098039215686274" green="0.53333333333333333" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="people ahead of you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLQ-MA-SA2">
+                                                <rect key="frame" x="103.5" y="438.5" width="168" height="22"/>
+                                                <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="18"/>
+                                                <color key="textColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="jYt-sS-ziv">
+                                                <rect key="frame" x="172.5" y="480.5" width="30" height="34"/>
+                                                <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="28"/>
+                                                <color key="textColor" red="0.25098039220000001" green="0.53333333329999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="behind you for now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhp-MG-Nwq">
+                                                <rect key="frame" x="108" y="524.5" width="159" height="22"/>
+                                                <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="18"/>
+                                                <color key="textColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let me know when I reach the top" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Mer-Tu-ZZ9">
+                                                <rect key="frame" x="19.5" y="582" width="336.5" height="26.5"/>
+                                                <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="22"/>
+                                                <color key="textColor" red="0.25098039220000001" green="0.53333333329999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSP-oP-rab">
+                                                <rect key="frame" x="25" y="640.5" width="325" height="57"/>
+                                                <color key="backgroundColor" red="0.25098039220000001" green="0.53333333329999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="57" id="vgh-iR-Ti0"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="18"/>
+                                                <state key="normal" title="Bump me up the queue!">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="bumpUpQueue:" destination="312-wz-pfX" eventType="touchUpInside" id="flF-pu-fgc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="tLQ-MA-SA2" firstAttribute="centerX" secondItem="bQT-xk-3ug" secondAttribute="centerX" id="3Sz-9d-hhW"/>
+                                            <constraint firstItem="pSP-oP-rab" firstAttribute="leading" secondItem="bQT-xk-3ug" secondAttribute="leading" constant="25" id="6Oc-Es-MsE"/>
+                                            <constraint firstItem="jYt-sS-ziv" firstAttribute="top" secondItem="tLQ-MA-SA2" secondAttribute="bottom" constant="20" id="HnT-jL-eZ6"/>
+                                            <constraint firstItem="hhp-MG-Nwq" firstAttribute="centerX" secondItem="bQT-xk-3ug" secondAttribute="centerX" id="J48-Gs-9hH"/>
+                                            <constraint firstItem="pSP-oP-rab" firstAttribute="top" secondItem="Mer-Tu-ZZ9" secondAttribute="bottom" constant="32" id="Qj5-NQ-lDE"/>
+                                            <constraint firstItem="Mer-Tu-ZZ9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bQT-xk-3ug" secondAttribute="leading" constant="5" id="QzE-hb-G7V"/>
+                                            <constraint firstItem="dJS-03-4dP" firstAttribute="top" secondItem="gJa-Lo-GYr" secondAttribute="bottom" constant="50" id="Z5K-Iz-XWh"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Mer-Tu-ZZ9" secondAttribute="trailing" constant="5" id="anv-s2-wz1"/>
+                                            <constraint firstAttribute="trailing" secondItem="pSP-oP-rab" secondAttribute="trailing" constant="25" id="baJ-EQ-TQH"/>
+                                            <constraint firstItem="Mer-Tu-ZZ9" firstAttribute="centerX" secondItem="bQT-xk-3ug" secondAttribute="centerX" id="dF9-EW-9as"/>
+                                            <constraint firstItem="FTu-hb-Dtm" firstAttribute="centerX" secondItem="bQT-xk-3ug" secondAttribute="centerX" id="fRS-70-1h1"/>
+                                            <constraint firstItem="tLQ-MA-SA2" firstAttribute="top" secondItem="FTu-hb-Dtm" secondAttribute="bottom" constant="10" id="gJS-d3-CCs"/>
+                                            <constraint firstAttribute="height" constant="812" id="gdO-jh-2N9"/>
+                                            <constraint firstItem="FTu-hb-Dtm" firstAttribute="top" secondItem="dJS-03-4dP" secondAttribute="bottom" constant="25" id="iJv-Hj-LDU"/>
+                                            <constraint firstItem="Mer-Tu-ZZ9" firstAttribute="top" secondItem="hhp-MG-Nwq" secondAttribute="bottom" constant="35" id="ic6-S7-VaV"/>
+                                            <constraint firstItem="dJS-03-4dP" firstAttribute="centerX" secondItem="bQT-xk-3ug" secondAttribute="centerX" id="ojp-FC-TQK"/>
+                                            <constraint firstItem="jYt-sS-ziv" firstAttribute="centerX" secondItem="bQT-xk-3ug" secondAttribute="centerX" id="qnk-WH-LKt"/>
+                                            <constraint firstItem="hhp-MG-Nwq" firstAttribute="top" secondItem="jYt-sS-ziv" secondAttribute="bottom" constant="10" id="riu-u3-B30"/>
+                                            <constraint firstItem="gJa-Lo-GYr" firstAttribute="centerX" secondItem="bQT-xk-3ug" secondAttribute="centerX" id="sPD-an-tF1"/>
+                                            <constraint firstItem="gJa-Lo-GYr" firstAttribute="top" secondItem="bQT-xk-3ug" secondAttribute="top" constant="50" id="wPk-5p-bSk"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="bQT-xk-3ug" secondAttribute="trailing" id="8zz-ni-JBd"/>
+                                    <constraint firstItem="bQT-xk-3ug" firstAttribute="leading" secondItem="XN0-4E-FZm" secondAttribute="leading" id="OKK-yG-Iw8"/>
+                                    <constraint firstItem="bQT-xk-3ug" firstAttribute="width" secondItem="XN0-4E-FZm" secondAttribute="width" id="SzB-mG-WGT"/>
+                                    <constraint firstItem="bQT-xk-3ug" firstAttribute="top" secondItem="XN0-4E-FZm" secondAttribute="top" id="e6o-XG-m02"/>
+                                    <constraint firstAttribute="bottom" secondItem="bQT-xk-3ug" secondAttribute="bottom" id="vwd-p2-IpH"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XN0-4E-FZm" firstAttribute="top" secondItem="GXb-ed-wRq" secondAttribute="top" id="3fg-vL-Mju"/>
+                            <constraint firstItem="GXb-ed-wRq" firstAttribute="trailing" secondItem="XN0-4E-FZm" secondAttribute="trailing" id="9My-qT-Wvl"/>
+                            <constraint firstItem="XN0-4E-FZm" firstAttribute="leading" secondItem="GXb-ed-wRq" secondAttribute="leading" id="Tp4-MY-NPy"/>
+                            <constraint firstItem="GXb-ed-wRq" firstAttribute="bottom" secondItem="XN0-4E-FZm" secondAttribute="bottom" id="p1B-Wx-aYV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GXb-ed-wRq"/>
                     </view>
+                    <size key="freeformSize" width="375" height="812"/>
+                    <connections>
+                        <outlet property="bumpUpQueueButton" destination="pSP-oP-rab" id="Nfa-ub-RD5"/>
+                        <outlet property="firstNameLabel" destination="dJS-03-4dP" id="jfp-5B-jV8"/>
+                        <outlet property="peopleAheadLabel" destination="FTu-hb-Dtm" id="KL9-3H-5wF"/>
+                        <outlet property="peopleBehindLabel" destination="jYt-sS-ziv" id="pkx-Vt-uIa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fud-DE-0kQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4650" y="-567"/>
+            <point key="canvasLocation" x="4642" y="-506"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fuc-Iu-B3f">
@@ -770,5 +885,6 @@
         <image name="backArrow" width="22" height="16"/>
         <image name="downArrow" width="12" height="7"/>
         <image name="envelopes" width="200" height="200"/>
+        <image name="paymentMethods" width="200" height="200"/>
     </resources>
 </document>
