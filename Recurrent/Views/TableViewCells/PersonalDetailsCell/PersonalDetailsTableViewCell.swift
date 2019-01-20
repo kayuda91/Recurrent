@@ -25,6 +25,12 @@ class PersonalDetailsTableViewCell: UITableViewCell, NibReusable {
         }
     }
     
+    var isNumericOnly: Bool = false {
+        didSet {
+            detailsTextField.keyboardType = isNumericOnly ? .numberPad : .default
+        }
+    }
+    
     var textFieldEndEditing: ((String) -> Void)?
     
     override func awakeFromNib() {
@@ -45,5 +51,16 @@ class PersonalDetailsTableViewCell: UITableViewCell, NibReusable {
 extension PersonalDetailsTableViewCell: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         textFieldEndEditing?(textField.text ?? "")
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let inputText = textField.text else {
+            return false
+        }
+        
+        let shouldChangeCharacter = !(isNumericOnly && inputText.count > 4 && range.length == 0)
+        
+        if !shouldChangeCharacter { textField.resignFirstResponder() }
+        return shouldChangeCharacter
     }
 }

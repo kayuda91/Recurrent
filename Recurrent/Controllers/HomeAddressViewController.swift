@@ -194,6 +194,7 @@ private extension HomeAddressViewController {
         let section = addressSections[indexPath.section]
         
         cell.title = section.title
+        cell.isNumericOnly = section.isNumericOnly
         
         cell.textFieldEndEditing = { text in
             //TODO: Save info
