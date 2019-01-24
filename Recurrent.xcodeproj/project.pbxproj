@@ -19,6 +19,30 @@
 		5F301D7521F3E12600A2E2A4 /* HomeAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F301D7321F3E12600A2E2A4 /* HomeAddressTableViewCell.xib */; };
 		5F301D7721F409A700A2E2A4 /* RegConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301D7621F409A700A2E2A4 /* RegConfirmationViewController.swift */; };
 		5F301D7921F4101700A2E2A4 /* QueueInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301D7821F4101700A2E2A4 /* QueueInfoViewController.swift */; };
+		5F301D7D21F6EE8000A2E2A4 /* FIRAnalyticsConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F301D7C21F6EE8000A2E2A4 /* FIRAnalyticsConnector.framework */; };
+		5F301D8521F6EE9500A2E2A4 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F301D7E21F6EE9300A2E2A4 /* GoogleUtilities.framework */; };
+		5F301D8621F6EE9500A2E2A4 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F301D7F21F6EE9300A2E2A4 /* nanopb.framework */; };
+		5F301D8721F6EE9500A2E2A4 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F301D8021F6EE9300A2E2A4 /* FirebaseAnalytics.framework */; };
+		5F301D8821F6EE9500A2E2A4 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F301D8121F6EE9300A2E2A4 /* FirebaseCoreDiagnostics.framework */; };
+		5F301D8921F6EE9500A2E2A4 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F301D8221F6EE9400A2E2A4 /* FirebaseInstanceID.framework */; };
+		5F301D8A21F6EE9500A2E2A4 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F301D8321F6EE9400A2E2A4 /* GoogleAppMeasurement.framework */; };
+		5F301D8B21F6EE9500A2E2A4 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F301D8421F6EE9400A2E2A4 /* FirebaseCore.framework */; };
+		5F301D8E21F6EF0E00A2E2A4 /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F301D8D21F6EF0E00A2E2A4 /* FirebaseAuth.framework */; };
+		5F301D9021F6EF1700A2E2A4 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F301D8F21F6EF1700A2E2A4 /* GTMSessionFetcher.framework */; };
+		5F301D9521F98F8900A2E2A4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301D9421F98F8900A2E2A4 /* User.swift */; };
+		5F301D9821F9909D00A2E2A4 /* StringRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301D9721F9909D00A2E2A4 /* StringRawRepresentable.swift */; };
+		5F301D9A21F990DB00A2E2A4 /* FirestroreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301D9921F990DB00A2E2A4 /* FirestroreModel.swift */; };
+		5F301DAD21F994E500A2E2A4 /* FirestoreModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301DAC21F994E500A2E2A4 /* FirestoreModelData.swift */; };
+		5F301DAF21F9957700A2E2A4 /* DocumentReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301DAE21F9957700A2E2A4 /* DocumentReference.swift */; };
+		5F301DB121F9958F00A2E2A4 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301DB021F9958F00A2E2A4 /* Query.swift */; };
+		5F4E73A421F9973D0093438D /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4E739C21F9973C0093438D /* Protobuf.framework */; };
+		5F4E73A521F9973D0093438D /* gRPC-Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4E739D21F9973C0093438D /* gRPC-Core.framework */; };
+		5F4E73A621F9973D0093438D /* FirebaseFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4E739E21F9973C0093438D /* FirebaseFirestore.framework */; };
+		5F4E73A821F9973D0093438D /* leveldb-library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4E73A121F9973C0093438D /* leveldb-library.framework */; };
+		5F4E73A921F9973D0093438D /* gRPC-C++.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4E73A221F9973C0093438D /* gRPC-C++.framework */; };
+		5F4E73AA21F9973D0093438D /* BoringSSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4E73A321F9973C0093438D /* BoringSSL.framework */; };
+		5F4E73AC21F999940093438D /* gRPCCertificates-Firestore.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5F4E73AB21F999940093438D /* gRPCCertificates-Firestore.bundle */; };
+		5F4E73AF21F99C320093438D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4E73AE21F99C320093438D /* libz.tbd */; };
 		5F73EA1E21E4628B004E0680 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73EA1D21E4628B004E0680 /* AppDelegate.swift */; };
 		5F73EA2021E4628B004E0680 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73EA1F21E4628B004E0680 /* ViewController.swift */; };
 		5F73EA2321E4628B004E0680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F73EA2121E4628B004E0680 /* Main.storyboard */; };
@@ -92,6 +116,31 @@
 		5F301D7321F3E12600A2E2A4 /* HomeAddressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeAddressTableViewCell.xib; sourceTree = "<group>"; };
 		5F301D7621F409A700A2E2A4 /* RegConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegConfirmationViewController.swift; sourceTree = "<group>"; };
 		5F301D7821F4101700A2E2A4 /* QueueInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueInfoViewController.swift; sourceTree = "<group>"; };
+		5F301D7C21F6EE8000A2E2A4 /* FIRAnalyticsConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FIRAnalyticsConnector.framework; sourceTree = "<group>"; };
+		5F301D7E21F6EE9300A2E2A4 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
+		5F301D7F21F6EE9300A2E2A4 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
+		5F301D8021F6EE9300A2E2A4 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		5F301D8121F6EE9300A2E2A4 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
+		5F301D8221F6EE9400A2E2A4 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		5F301D8321F6EE9400A2E2A4 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
+		5F301D8421F6EE9400A2E2A4 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
+		5F301D8D21F6EF0E00A2E2A4 /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = "<group>"; };
+		5F301D8F21F6EF1700A2E2A4 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = "<group>"; };
+		5F301D9121F6EFBE00A2E2A4 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		5F301D9421F98F8900A2E2A4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5F301D9721F9909D00A2E2A4 /* StringRawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringRawRepresentable.swift; sourceTree = "<group>"; };
+		5F301D9921F990DB00A2E2A4 /* FirestroreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestroreModel.swift; sourceTree = "<group>"; };
+		5F301DAC21F994E500A2E2A4 /* FirestoreModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreModelData.swift; sourceTree = "<group>"; };
+		5F301DAE21F9957700A2E2A4 /* DocumentReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentReference.swift; sourceTree = "<group>"; };
+		5F301DB021F9958F00A2E2A4 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
+		5F4E739C21F9973C0093438D /* Protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Protobuf.framework; sourceTree = "<group>"; };
+		5F4E739D21F9973C0093438D /* gRPC-Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "gRPC-Core.framework"; sourceTree = "<group>"; };
+		5F4E739E21F9973C0093438D /* FirebaseFirestore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = "<group>"; };
+		5F4E73A121F9973C0093438D /* leveldb-library.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "leveldb-library.framework"; sourceTree = "<group>"; };
+		5F4E73A221F9973C0093438D /* gRPC-C++.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "gRPC-C++.framework"; sourceTree = "<group>"; };
+		5F4E73A321F9973C0093438D /* BoringSSL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BoringSSL.framework; sourceTree = "<group>"; };
+		5F4E73AB21F999940093438D /* gRPCCertificates-Firestore.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "gRPCCertificates-Firestore.bundle"; sourceTree = "<group>"; };
+		5F4E73AE21F99C320093438D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5F73EA1A21E4628B004E0680 /* Recurrent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recurrent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F73EA1D21E4628B004E0680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F73EA1F21E4628B004E0680 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +208,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F4E73AF21F99C320093438D /* libz.tbd in Frameworks */,
+				5F4E73A621F9973D0093438D /* FirebaseFirestore.framework in Frameworks */,
+				5F301D8E21F6EF0E00A2E2A4 /* FirebaseAuth.framework in Frameworks */,
+				5F4E73AA21F9973D0093438D /* BoringSSL.framework in Frameworks */,
+				5F301D8721F6EE9500A2E2A4 /* FirebaseAnalytics.framework in Frameworks */,
+				5F301D8921F6EE9500A2E2A4 /* FirebaseInstanceID.framework in Frameworks */,
+				5F301D8521F6EE9500A2E2A4 /* GoogleUtilities.framework in Frameworks */,
+				5F4E73A821F9973D0093438D /* leveldb-library.framework in Frameworks */,
+				5F4E73A421F9973D0093438D /* Protobuf.framework in Frameworks */,
+				5F4E73A521F9973D0093438D /* gRPC-Core.framework in Frameworks */,
+				5F301D9021F6EF1700A2E2A4 /* GTMSessionFetcher.framework in Frameworks */,
+				5F301D8821F6EE9500A2E2A4 /* FirebaseCoreDiagnostics.framework in Frameworks */,
+				5F301D8B21F6EE9500A2E2A4 /* FirebaseCore.framework in Frameworks */,
+				5F301D8A21F6EE9500A2E2A4 /* GoogleAppMeasurement.framework in Frameworks */,
+				5F301D8621F6EE9500A2E2A4 /* nanopb.framework in Frameworks */,
+				5F301D7D21F6EE8000A2E2A4 /* FIRAnalyticsConnector.framework in Frameworks */,
+				5F4E73A921F9973D0093438D /* gRPC-C++.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,11 +292,98 @@
 			path = HomeAddressCell;
 			sourceTree = "<group>";
 		};
+		5F301D7A21F6EE3E00A2E2A4 /* FireBase */ = {
+			isa = PBXGroup;
+			children = (
+				5F301D9121F6EFBE00A2E2A4 /* module.modulemap */,
+				5F301D8C21F6EEF100A2E2A4 /* Auth */,
+				5F301D7B21F6EE4F00A2E2A4 /* Analytics */,
+				5F4E739B21F9973C0093438D /* Firestore */,
+			);
+			path = FireBase;
+			sourceTree = "<group>";
+		};
+		5F301D7B21F6EE4F00A2E2A4 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				5F301D8021F6EE9300A2E2A4 /* FirebaseAnalytics.framework */,
+				5F301D8421F6EE9400A2E2A4 /* FirebaseCore.framework */,
+				5F301D8121F6EE9300A2E2A4 /* FirebaseCoreDiagnostics.framework */,
+				5F301D8221F6EE9400A2E2A4 /* FirebaseInstanceID.framework */,
+				5F301D8321F6EE9400A2E2A4 /* GoogleAppMeasurement.framework */,
+				5F301D7E21F6EE9300A2E2A4 /* GoogleUtilities.framework */,
+				5F301D7F21F6EE9300A2E2A4 /* nanopb.framework */,
+				5F301D7C21F6EE8000A2E2A4 /* FIRAnalyticsConnector.framework */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		5F301D8C21F6EEF100A2E2A4 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				5F301D8D21F6EF0E00A2E2A4 /* FirebaseAuth.framework */,
+				5F301D8F21F6EF1700A2E2A4 /* GTMSessionFetcher.framework */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		5F301D9221F98F6600A2E2A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5F301D9621F9905F00A2E2A4 /* DatabaseService */,
+				5F301D9321F98F7000A2E2A4 /* DataTypes */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5F301D9321F98F7000A2E2A4 /* DataTypes */ = {
+			isa = PBXGroup;
+			children = (
+				5F301D9421F98F8900A2E2A4 /* User.swift */,
+			);
+			path = DataTypes;
+			sourceTree = "<group>";
+		};
+		5F301D9621F9905F00A2E2A4 /* DatabaseService */ = {
+			isa = PBXGroup;
+			children = (
+				5F301D9721F9909D00A2E2A4 /* StringRawRepresentable.swift */,
+				5F301D9921F990DB00A2E2A4 /* FirestroreModel.swift */,
+				5F301DAC21F994E500A2E2A4 /* FirestoreModelData.swift */,
+				5F301DAE21F9957700A2E2A4 /* DocumentReference.swift */,
+				5F301DB021F9958F00A2E2A4 /* Query.swift */,
+			);
+			path = DatabaseService;
+			sourceTree = "<group>";
+		};
+		5F4E739B21F9973C0093438D /* Firestore */ = {
+			isa = PBXGroup;
+			children = (
+				5F4E73AB21F999940093438D /* gRPCCertificates-Firestore.bundle */,
+				5F4E739C21F9973C0093438D /* Protobuf.framework */,
+				5F4E739D21F9973C0093438D /* gRPC-Core.framework */,
+				5F4E739E21F9973C0093438D /* FirebaseFirestore.framework */,
+				5F4E73A121F9973C0093438D /* leveldb-library.framework */,
+				5F4E73A221F9973C0093438D /* gRPC-C++.framework */,
+				5F4E73A321F9973C0093438D /* BoringSSL.framework */,
+			);
+			path = Firestore;
+			sourceTree = "<group>";
+		};
+		5F4E73AD21F99C310093438D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F4E73AE21F99C320093438D /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5F73EA1121E4628B004E0680 = {
 			isa = PBXGroup;
 			children = (
 				5F73EA1C21E4628B004E0680 /* Recurrent */,
 				5F73EA1B21E4628B004E0680 /* Products */,
+				5F4E73AD21F99C310093438D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -250,6 +403,8 @@
 				5F73EA3221E479A1004E0680 /* Controllers */,
 				5F301D5C21F1B20000A2E2A4 /* Views */,
 				5F301D6321F1B64900A2E2A4 /* Protocols */,
+				5F301D9221F98F6600A2E2A4 /* Model */,
+				5F301D7A21F6EE3E00A2E2A4 /* FireBase */,
 				5F73EA1D21E4628B004E0680 /* AppDelegate.swift */,
 				5F73EA1F21E4628B004E0680 /* ViewController.swift */,
 				5F73EA2121E4628B004E0680 /* Main.storyboard */,
@@ -462,6 +617,7 @@
 				5F73EA8A21E5BC91004E0680 /* Roboto-MediumItalic.ttf in Resources */,
 				5F73EA8921E5BC91004E0680 /* Roboto-Regular.ttf in Resources */,
 				5F73EA7121E5B9CB004E0680 /* FiraSans-Heavy.otf in Resources */,
+				5F4E73AC21F999940093438D /* gRPCCertificates-Firestore.bundle in Resources */,
 				5F73EA8D21E5BC91004E0680 /* Roboto-LightItalic.ttf in Resources */,
 				5F73EA6221E5B9CB004E0680 /* FiraSans-MediumItalic.otf in Resources */,
 			);
@@ -479,19 +635,25 @@
 				5F73EA2621E4628B004E0680 /* Recurrent.xcdatamodeld in Sources */,
 				5F73EA9621E5BE69004E0680 /* UIView+Corners.swift in Sources */,
 				5F301D6A21F1B90C00A2E2A4 /* ReusableTableView.swift in Sources */,
+				5F301DB121F9958F00A2E2A4 /* Query.swift in Sources */,
 				5F301D7921F4101700A2E2A4 /* QueueInfoViewController.swift in Sources */,
 				5F301D6121F1B28700A2E2A4 /* PersonalDetailsTableViewCell.swift in Sources */,
+				5F301DAD21F994E500A2E2A4 /* FirestoreModelData.swift in Sources */,
 				5F301D7021F3C06D00A2E2A4 /* Countries.swift in Sources */,
+				5F301D9521F98F8900A2E2A4 /* User.swift in Sources */,
 				5F301D7421F3E12600A2E2A4 /* HomeAddressTableViewCell.swift in Sources */,
 				5F73EA9C21E9BBCE004E0680 /* Enum+RawRepresentable.swift in Sources */,
 				5F301D6821F1B6FD00A2E2A4 /* Reusable.swift in Sources */,
 				5F73EAA021F03705004E0680 /* PasscodeViewController.swift in Sources */,
 				5F73EA9E21EF05B8004E0680 /* UIViewController+Gestures.swift in Sources */,
 				5F301D6C21F3B1DA00A2E2A4 /* HomeAddressViewController.swift in Sources */,
+				5F301DAF21F9957700A2E2A4 /* DocumentReference.swift in Sources */,
 				5F73EA2021E4628B004E0680 /* ViewController.swift in Sources */,
 				5F301D7721F409A700A2E2A4 /* RegConfirmationViewController.swift in Sources */,
 				5F301D6621F1B6B200A2E2A4 /* NibLoadable.swift in Sources */,
 				5F73EA1E21E4628B004E0680 /* AppDelegate.swift in Sources */,
+				5F301D9821F9909D00A2E2A4 /* StringRawRepresentable.swift in Sources */,
+				5F301D9A21F990DB00A2E2A4 /* FirestroreModel.swift in Sources */,
 				5F73EA9821E5C000004E0680 /* CALayer+Shadow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -638,6 +800,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8DEG88CLED;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Recurrent/FireBase/Analytics",
+					"$(PROJECT_DIR)/Recurrent/FireBase/Auth",
+					"$(PROJECT_DIR)/Recurrent/FireBase/Firestore",
+				);
 				INFOPLIST_FILE = Recurrent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -656,6 +824,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8DEG88CLED;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Recurrent/FireBase/Analytics",
+					"$(PROJECT_DIR)/Recurrent/FireBase/Auth",
+					"$(PROJECT_DIR)/Recurrent/FireBase/Firestore",
+				);
 				INFOPLIST_FILE = Recurrent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
