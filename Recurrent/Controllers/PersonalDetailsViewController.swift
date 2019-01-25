@@ -12,6 +12,9 @@ class PersonalDetailsViewController: UIViewController {
     @IBOutlet weak var continueUIButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    var firstName: String?
+    var lastName: String?
+    
     var detailsSections = DetailsSectionType.getCases()
     
     override func viewDidLoad() {
@@ -28,6 +31,7 @@ class PersonalDetailsViewController: UIViewController {
     }
     
     @IBAction func continueRegistration(_ sender: UIButton) {
+        saveDetails()
         navigateToHomeAddressScreen()
     }
     
@@ -39,6 +43,19 @@ class PersonalDetailsViewController: UIViewController {
                                        offset: CGSize(width: 5, height: 5),
                                        opacity: 0.5,
                                        radius: 5)
+    }
+    
+    func saveDetails() {
+        guard firstName != nil, firstName != "",
+            lastName != nil, lastName != "" else {
+            showAlert(message: "Please fill up your details")
+            return
+        }
+        
+        UserDefaults.standard.set(firstName,
+                                  forKey: UserDefaultKeys.firstName)
+        UserDefaults.standard.set(lastName,
+                                  forKey: UserDefaultKeys.lastName)
     }
     
     // MARK: - TableView configuration
@@ -83,7 +100,11 @@ extension PersonalDetailsViewController: UITableViewDelegate, UITableViewDataSou
         cell.title = detailsSections[indexPath.section].title
         
         cell.textFieldEndEditing = { text in
-            //TODO: Save info
+            if indexPath.section == 0 {
+                self.firstName = text
+            } else {
+                self.lastName = text
+            }
         }
         
         return cell

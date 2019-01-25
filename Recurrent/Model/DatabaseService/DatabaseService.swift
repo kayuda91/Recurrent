@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseFirestore
 import FirebaseCore
+import FirebaseAuth
 
 protocol DatabaseServicable : DatabaseSaveDescribable, DatabaseFetchDescribable {
     var router: DatabaseRouterable { get set }
@@ -21,7 +22,7 @@ final class DatabaseService {
     lazy var router: DatabaseRouterable = DatabaseRouter()
     
     var userIdentifier: String? {
-        return ""//Auth.auth().currentUser?.uid
+        return Auth.auth().currentUser?.uid
     }
 }
 
@@ -40,6 +41,20 @@ extension DatabaseService {
 extension DatabaseService: DatabaseServicable {
     static func configure() {
         FirebaseApp.configure()
+    }
+}
+
+// MARK: - DatabaseAuthDescribable
+extension DatabaseService {
+    func signInAnonymously(completion: DatabaseAuthDescribable.AuthSignInCallback?) {
+        Auth.auth().signInAnonymously { authResult, error in
+            guard let userId = authResult?.user.uid else {
+                completion?(nil, error)
+                return
+            }
+
+            completion?(User(identifier: userId), error)
+        }
     }
 }
 

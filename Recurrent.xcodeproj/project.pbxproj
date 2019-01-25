@@ -25,6 +25,8 @@
 		5F301DAD21F994E500A2E2A4 /* FirestoreModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301DAC21F994E500A2E2A4 /* FirestoreModelData.swift */; };
 		5F301DAF21F9957700A2E2A4 /* DocumentReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301DAE21F9957700A2E2A4 /* DocumentReference.swift */; };
 		5F301DB121F9958F00A2E2A4 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301DB021F9958F00A2E2A4 /* Query.swift */; };
+		5F42919C21FADAA8000FF175 /* DatabaseAuthDescribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F42919B21FADAA8000FF175 /* DatabaseAuthDescribable.swift */; };
+		5F42919F21FAE96D000FF175 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F42919E21FAE96D000FF175 /* UserDefaultKeys.swift */; };
 		5F4E73AF21F99C320093438D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4E73AE21F99C320093438D /* libz.tbd */; };
 		5F4E73B121F9A2510093438D /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4E73B021F9A2510093438D /* DatabaseService.swift */; };
 		5F4E73B421F9A2CC0093438D /* DatabaseSaveDescribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4E73B321F9A2CC0093438D /* DatabaseSaveDescribable.swift */; };
@@ -114,6 +116,8 @@
 		5F301DAC21F994E500A2E2A4 /* FirestoreModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreModelData.swift; sourceTree = "<group>"; };
 		5F301DAE21F9957700A2E2A4 /* DocumentReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentReference.swift; sourceTree = "<group>"; };
 		5F301DB021F9958F00A2E2A4 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
+		5F42919B21FADAA8000FF175 /* DatabaseAuthDescribable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseAuthDescribable.swift; sourceTree = "<group>"; };
+		5F42919E21FAE96D000FF175 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
 		5F4E73AE21F99C320093438D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5F4E73B021F9A2510093438D /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		5F4E73B321F9A2CC0093438D /* DatabaseSaveDescribable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseSaveDescribable.swift; sourceTree = "<group>"; };
@@ -292,6 +296,14 @@
 			path = DatabaseService;
 			sourceTree = "<group>";
 		};
+		5F42919D21FAE95B000FF175 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5F42919E21FAE96D000FF175 /* UserDefaultKeys.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		5F4E73AD21F99C310093438D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +318,7 @@
 			children = (
 				5F4E73B321F9A2CC0093438D /* DatabaseSaveDescribable.swift */,
 				5F4E73B521F9A2E80093438D /* DatabaseFetchDescribable.swift */,
+				5F42919B21FADAA8000FF175 /* DatabaseAuthDescribable.swift */,
 			);
 			path = DatabaseDescribable;
 			sourceTree = "<group>";
@@ -339,6 +352,7 @@
 		5F73EA1C21E4628B004E0680 /* Recurrent */ = {
 			isa = PBXGroup;
 			children = (
+				5F42919D21FAE95B000FF175 /* Data */,
 				5F301D6E21F3C06100A2E2A4 /* Enums */,
 				5F73EA9421E5BE3F004E0680 /* Extensions */,
 				5F73EA3221E479A1004E0680 /* Controllers */,
@@ -606,6 +620,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Recurrent/Pods-Recurrent-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
@@ -618,6 +633,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
@@ -644,6 +660,7 @@
 				5F301D5B21F1AC3E00A2E2A4 /* PersonalDetailsViewController.swift in Sources */,
 				5F73EA2621E4628B004E0680 /* Recurrent.xcdatamodeld in Sources */,
 				5F73EA9621E5BE69004E0680 /* UIView+Corners.swift in Sources */,
+				5F42919F21FAE96D000FF175 /* UserDefaultKeys.swift in Sources */,
 				5F4E73B421F9A2CC0093438D /* DatabaseSaveDescribable.swift in Sources */,
 				5F4E73BB21F9A5CD0093438D /* Error+Initializable.swift in Sources */,
 				5F301D6A21F1B90C00A2E2A4 /* ReusableTableView.swift in Sources */,
@@ -654,6 +671,7 @@
 				5F301D7021F3C06D00A2E2A4 /* Countries.swift in Sources */,
 				5F301D9521F98F8900A2E2A4 /* User.swift in Sources */,
 				5F4E73B621F9A2E80093438D /* DatabaseFetchDescribable.swift in Sources */,
+				5F42919C21FADAA8000FF175 /* DatabaseAuthDescribable.swift in Sources */,
 				5F301D7421F3E12600A2E2A4 /* HomeAddressTableViewCell.swift in Sources */,
 				5F73EA9C21E9BBCE004E0680 /* Enum+RawRepresentable.swift in Sources */,
 				5F301D6821F1B6FD00A2E2A4 /* Reusable.swift in Sources */,

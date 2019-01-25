@@ -13,12 +13,22 @@ class PasscodeViewController: UIViewController {
     @IBOutlet weak var createPasscodeTitle: UILabel!
     @IBOutlet weak var filledPasscodeStackview: UIStackView!
     
-    var passcode = [Int]()
+    var passcode = [Int]() {
+        didSet {
+            updateFilledPasscodeCircles()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        passcode.removeAll()
     }
     
     // MARK: - @IBAction
@@ -33,9 +43,8 @@ class PasscodeViewController: UIViewController {
             passcode.append(sender.tag)
         }
         
-        updateFilledPasscodeCircles()
-        
         if passcode.count == 4 {
+            savePasscode()
             navigateToPersonalDetailsScreen()
         }
     }
@@ -60,6 +69,11 @@ class PasscodeViewController: UIViewController {
         for i in filledPasscodeStackview.subviews.indices {
             filledPasscodeStackview.subviews[i].backgroundColor = i < passcode.count ? #colorLiteral(red: 0.2509803922, green: 0.5333333333, blue: 0.9490196078, alpha: 1) : #colorLiteral(red: 0.7843137255, green: 0.8549019608, blue: 0.968627451, alpha: 1)
         }
+    }
+    
+    func savePasscode() {
+        UserDefaults.standard.set(passcode,
+                                  forKey: UserDefaultKeys.passcode)
     }
     
     // MARK: - Navigation

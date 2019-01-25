@@ -78,8 +78,8 @@ class PhoneNumberViewController: UIViewController {
                 return
             }
             
-            //TODO: Save new user
-            print("Success")
+            self.savePhoneNumber()
+            self.navigateToPersonalDetailsController()
         }
     }
     
@@ -94,24 +94,38 @@ class PhoneNumberViewController: UIViewController {
         configureTextField()
     }
     
+   
+    func configureTextField() {
+        phoneNumbertextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+    }
+    
+    // MARK: - Navigation
+    func navigateToPersonalDetailsController() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PasscodeViewController")
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+// MARK: - Picker configuration
+extension PhoneNumberViewController {
     func configurePickerView() {
         self.countryPickerView = UIPickerView(frame: CGRect(x: 0,
                                                             y: self.view.frame.size.height - 216 + 36,
-                                                       width: self.view.frame.size.width,
-                                                       height: 216 - 36))
+                                                            width: self.view.frame.size.width,
+                                                            height: 216 - 36))
         countryPickerView.showsSelectionIndicator = true
         countryPickerView.delegate = self
         countryPickerView.dataSource = self
         countryPickerView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
         countryPickerToolbar = UIToolbar(frame: CGRect(x: 0,
-                                              y: self.view.frame.size.height - 216,
-                                              width: self.view.frame.size.width,
-                                              height: 36))
+                                                       y: self.view.frame.size.height - 216,
+                                                       width: self.view.frame.size.width,
+                                                       height: 36))
         countryPickerToolbar.barStyle = .default
         countryPickerToolbar.isTranslucent = true
         countryPickerToolbar.tintColor = #colorLiteral(red: 0.3089829385, green: 0.6156063676, blue: 0.9604739547, alpha: 1)
-
+        
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneClick))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelClick))
@@ -137,31 +151,23 @@ class PhoneNumberViewController: UIViewController {
         countryPickerToolbar.removeFromSuperview()
         countryPickerView.removeFromSuperview()
     }
-    
-    func configureTextField() {
-        phoneNumbertextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-    }
-    
-    // MARK: - Navigation
-    func navigateToPersonalDetailsController() {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PasscodeViewController")
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    // MARK: - Database communication
+}
+
+// MARK: - API Communication methods
+extension PhoneNumberViewController {
     func validatePhoneNumber(completion: @escaping (Bool) -> Void) {
         databaseService.fetchUsers(completion: { [weak self] users, error in
             guard let users = users else {
-                 self?.showAlert(message: error?.localizedDescription ?? "Error")
+                self?.showAlert(message: error?.localizedDescription ?? "Error")
                 return
             }
             
             users.forEach { user in
                 guard let fetchedPhoneNumber = user.phoneNumber, let enteredNumber = self?.inputPhoneNumber,
-                let countryCode = self?.selectedCountry.phoneCode else {
-                    self?.showAlert(message: "Couldn't fetch number")
-                    completion(false)
-                    return
+                    let countryCode = self?.selectedCountry.phoneCode else {
+                        self?.showAlert(message: "Couldn't fetch number")
+                        completion(false)
+                        return
                 }
                 
                 if fetchedPhoneNumber == countryCode + enteredNumber {
@@ -173,8 +179,9 @@ class PhoneNumberViewController: UIViewController {
         })
     }
     
-    func savePhoneNumber(completion: @escaping (Bool) -> Void) {
-        
+    func savePhoneNumber() {
+        UserDefaults.standard.set(selectedCountry.phoneCode + inputPhoneNumber,
+                                  forKey: UserDefaultKeys.phoneNumber)
     }
 }
 

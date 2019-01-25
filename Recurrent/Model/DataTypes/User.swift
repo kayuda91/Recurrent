@@ -8,10 +8,12 @@
 
 import Foundation
 import FirebaseFirestore
+import FirebaseAuth
 
 final class User {
     var identifier: String
     var phoneNumber: String?
+    var passcode: String?
 
     var serialized: [String : Any] {
         var values = [String : Any]()
@@ -22,13 +24,19 @@ final class User {
             values[Field.phoneNumber.stringRawValue] = phoneNumber
         }
         
+        if let passcode = passcode {
+            values[Field.passcode.stringRawValue] = passcode
+        }
+        
         return values
     }
     
     init(identifier: String,
-         phoneNumber: String? = nil) {
+         phoneNumber: String? = nil,
+         passcode: String? = nil) {
         self.identifier = identifier
         self.phoneNumber = phoneNumber
+        self.passcode = passcode
     }
     
     init?(modelData: FirestoreModelData) throws {
@@ -38,6 +46,7 @@ final class User {
         
         identifier = modelData.documentID
         phoneNumber = modelData.optionalValue(forKey: Field.phoneNumber.stringRawValue)
+        passcode = modelData.optionalValue(forKey: Field.passcode.stringRawValue)
     }
 }
 
@@ -46,6 +55,7 @@ extension User: FirestoreModel {
     enum Field: String, StringRawRepresentable {
         case identifier
         case phoneNumber
+        case passcode
     }
 }
 
