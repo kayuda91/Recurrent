@@ -19,30 +19,19 @@
 		5F301D7521F3E12600A2E2A4 /* HomeAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F301D7321F3E12600A2E2A4 /* HomeAddressTableViewCell.xib */; };
 		5F301D7721F409A700A2E2A4 /* RegConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301D7621F409A700A2E2A4 /* RegConfirmationViewController.swift */; };
 		5F301D7921F4101700A2E2A4 /* QueueInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301D7821F4101700A2E2A4 /* QueueInfoViewController.swift */; };
-		5F301D7D21F6EE8000A2E2A4 /* FIRAnalyticsConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F301D7C21F6EE8000A2E2A4 /* FIRAnalyticsConnector.framework */; };
-		5F301D8521F6EE9500A2E2A4 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F301D7E21F6EE9300A2E2A4 /* GoogleUtilities.framework */; };
-		5F301D8621F6EE9500A2E2A4 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F301D7F21F6EE9300A2E2A4 /* nanopb.framework */; };
-		5F301D8721F6EE9500A2E2A4 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F301D8021F6EE9300A2E2A4 /* FirebaseAnalytics.framework */; };
-		5F301D8821F6EE9500A2E2A4 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F301D8121F6EE9300A2E2A4 /* FirebaseCoreDiagnostics.framework */; };
-		5F301D8921F6EE9500A2E2A4 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F301D8221F6EE9400A2E2A4 /* FirebaseInstanceID.framework */; };
-		5F301D8A21F6EE9500A2E2A4 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F301D8321F6EE9400A2E2A4 /* GoogleAppMeasurement.framework */; };
-		5F301D8B21F6EE9500A2E2A4 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F301D8421F6EE9400A2E2A4 /* FirebaseCore.framework */; };
-		5F301D8E21F6EF0E00A2E2A4 /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F301D8D21F6EF0E00A2E2A4 /* FirebaseAuth.framework */; };
-		5F301D9021F6EF1700A2E2A4 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F301D8F21F6EF1700A2E2A4 /* GTMSessionFetcher.framework */; };
 		5F301D9521F98F8900A2E2A4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301D9421F98F8900A2E2A4 /* User.swift */; };
 		5F301D9821F9909D00A2E2A4 /* StringRawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301D9721F9909D00A2E2A4 /* StringRawRepresentable.swift */; };
 		5F301D9A21F990DB00A2E2A4 /* FirestroreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301D9921F990DB00A2E2A4 /* FirestroreModel.swift */; };
 		5F301DAD21F994E500A2E2A4 /* FirestoreModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301DAC21F994E500A2E2A4 /* FirestoreModelData.swift */; };
 		5F301DAF21F9957700A2E2A4 /* DocumentReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301DAE21F9957700A2E2A4 /* DocumentReference.swift */; };
 		5F301DB121F9958F00A2E2A4 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F301DB021F9958F00A2E2A4 /* Query.swift */; };
-		5F4E73A421F9973D0093438D /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4E739C21F9973C0093438D /* Protobuf.framework */; };
-		5F4E73A521F9973D0093438D /* gRPC-Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4E739D21F9973C0093438D /* gRPC-Core.framework */; };
-		5F4E73A621F9973D0093438D /* FirebaseFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4E739E21F9973C0093438D /* FirebaseFirestore.framework */; };
-		5F4E73A821F9973D0093438D /* leveldb-library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4E73A121F9973C0093438D /* leveldb-library.framework */; };
-		5F4E73A921F9973D0093438D /* gRPC-C++.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4E73A221F9973C0093438D /* gRPC-C++.framework */; };
-		5F4E73AA21F9973D0093438D /* BoringSSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4E73A321F9973C0093438D /* BoringSSL.framework */; };
-		5F4E73AC21F999940093438D /* gRPCCertificates-Firestore.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5F4E73AB21F999940093438D /* gRPCCertificates-Firestore.bundle */; };
 		5F4E73AF21F99C320093438D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4E73AE21F99C320093438D /* libz.tbd */; };
+		5F4E73B121F9A2510093438D /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4E73B021F9A2510093438D /* DatabaseService.swift */; };
+		5F4E73B421F9A2CC0093438D /* DatabaseSaveDescribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4E73B321F9A2CC0093438D /* DatabaseSaveDescribable.swift */; };
+		5F4E73B621F9A2E80093438D /* DatabaseFetchDescribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4E73B521F9A2E80093438D /* DatabaseFetchDescribable.swift */; };
+		5F4E73B921F9A3E60093438D /* DatabaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4E73B821F9A3E60093438D /* DatabaseRouter.swift */; };
+		5F4E73BB21F9A5CD0093438D /* Error+Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4E73BA21F9A5CD0093438D /* Error+Initializable.swift */; };
+		5F4E73BD21F9A82E0093438D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F4E73BC21F9A82D0093438D /* GoogleService-Info.plist */; };
 		5F73EA1E21E4628B004E0680 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73EA1D21E4628B004E0680 /* AppDelegate.swift */; };
 		5F73EA2021E4628B004E0680 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73EA1F21E4628B004E0680 /* ViewController.swift */; };
 		5F73EA2321E4628B004E0680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F73EA2121E4628B004E0680 /* Main.storyboard */; };
@@ -101,9 +90,11 @@
 		5F73EA9C21E9BBCE004E0680 /* Enum+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73EA9B21E9BBCE004E0680 /* Enum+RawRepresentable.swift */; };
 		5F73EA9E21EF05B8004E0680 /* UIViewController+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73EA9D21EF05B8004E0680 /* UIViewController+Gestures.swift */; };
 		5F73EAA021F03705004E0680 /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73EA9F21F03705004E0680 /* PasscodeViewController.swift */; };
+		C9E29D30C6B15EB6F5A6AA10 /* Pods_Recurrent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9569B13E7983DC0EA86ED7BF /* Pods_Recurrent.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		257F6006AE6CC9E1296ABE43 /* Pods-Recurrent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recurrent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Recurrent/Pods-Recurrent.debug.xcconfig"; sourceTree = "<group>"; };
 		5F301D5A21F1AC3E00A2E2A4 /* PersonalDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailsViewController.swift; sourceTree = "<group>"; };
 		5F301D5F21F1B28700A2E2A4 /* PersonalDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		5F301D6021F1B28700A2E2A4 /* PersonalDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalDetailsTableViewCell.xib; sourceTree = "<group>"; };
@@ -116,31 +107,19 @@
 		5F301D7321F3E12600A2E2A4 /* HomeAddressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeAddressTableViewCell.xib; sourceTree = "<group>"; };
 		5F301D7621F409A700A2E2A4 /* RegConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegConfirmationViewController.swift; sourceTree = "<group>"; };
 		5F301D7821F4101700A2E2A4 /* QueueInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueInfoViewController.swift; sourceTree = "<group>"; };
-		5F301D7C21F6EE8000A2E2A4 /* FIRAnalyticsConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FIRAnalyticsConnector.framework; sourceTree = "<group>"; };
-		5F301D7E21F6EE9300A2E2A4 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
-		5F301D7F21F6EE9300A2E2A4 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
-		5F301D8021F6EE9300A2E2A4 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
-		5F301D8121F6EE9300A2E2A4 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
-		5F301D8221F6EE9400A2E2A4 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
-		5F301D8321F6EE9400A2E2A4 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
-		5F301D8421F6EE9400A2E2A4 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
-		5F301D8D21F6EF0E00A2E2A4 /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = "<group>"; };
-		5F301D8F21F6EF1700A2E2A4 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = "<group>"; };
-		5F301D9121F6EFBE00A2E2A4 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		5F301D9421F98F8900A2E2A4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5F301D9721F9909D00A2E2A4 /* StringRawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringRawRepresentable.swift; sourceTree = "<group>"; };
 		5F301D9921F990DB00A2E2A4 /* FirestroreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestroreModel.swift; sourceTree = "<group>"; };
 		5F301DAC21F994E500A2E2A4 /* FirestoreModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreModelData.swift; sourceTree = "<group>"; };
 		5F301DAE21F9957700A2E2A4 /* DocumentReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentReference.swift; sourceTree = "<group>"; };
 		5F301DB021F9958F00A2E2A4 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
-		5F4E739C21F9973C0093438D /* Protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Protobuf.framework; sourceTree = "<group>"; };
-		5F4E739D21F9973C0093438D /* gRPC-Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "gRPC-Core.framework"; sourceTree = "<group>"; };
-		5F4E739E21F9973C0093438D /* FirebaseFirestore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = "<group>"; };
-		5F4E73A121F9973C0093438D /* leveldb-library.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "leveldb-library.framework"; sourceTree = "<group>"; };
-		5F4E73A221F9973C0093438D /* gRPC-C++.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "gRPC-C++.framework"; sourceTree = "<group>"; };
-		5F4E73A321F9973C0093438D /* BoringSSL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BoringSSL.framework; sourceTree = "<group>"; };
-		5F4E73AB21F999940093438D /* gRPCCertificates-Firestore.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "gRPCCertificates-Firestore.bundle"; sourceTree = "<group>"; };
 		5F4E73AE21F99C320093438D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		5F4E73B021F9A2510093438D /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		5F4E73B321F9A2CC0093438D /* DatabaseSaveDescribable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseSaveDescribable.swift; sourceTree = "<group>"; };
+		5F4E73B521F9A2E80093438D /* DatabaseFetchDescribable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseFetchDescribable.swift; sourceTree = "<group>"; };
+		5F4E73B821F9A3E60093438D /* DatabaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRouter.swift; sourceTree = "<group>"; };
+		5F4E73BA21F9A5CD0093438D /* Error+Initializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Initializable.swift"; sourceTree = "<group>"; };
+		5F4E73BC21F9A82D0093438D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5F73EA1A21E4628B004E0680 /* Recurrent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recurrent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F73EA1D21E4628B004E0680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F73EA1F21E4628B004E0680 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +180,8 @@
 		5F73EA9B21E9BBCE004E0680 /* Enum+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enum+RawRepresentable.swift"; sourceTree = "<group>"; };
 		5F73EA9D21EF05B8004E0680 /* UIViewController+Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Gestures.swift"; sourceTree = "<group>"; };
 		5F73EA9F21F03705004E0680 /* PasscodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
+		9569B13E7983DC0EA86ED7BF /* Pods_Recurrent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recurrent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E60763D3462427251B98C66D /* Pods-Recurrent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recurrent.release.xcconfig"; path = "Pods/Target Support Files/Pods-Recurrent/Pods-Recurrent.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,22 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F4E73AF21F99C320093438D /* libz.tbd in Frameworks */,
-				5F4E73A621F9973D0093438D /* FirebaseFirestore.framework in Frameworks */,
-				5F301D8E21F6EF0E00A2E2A4 /* FirebaseAuth.framework in Frameworks */,
-				5F4E73AA21F9973D0093438D /* BoringSSL.framework in Frameworks */,
-				5F301D8721F6EE9500A2E2A4 /* FirebaseAnalytics.framework in Frameworks */,
-				5F301D8921F6EE9500A2E2A4 /* FirebaseInstanceID.framework in Frameworks */,
-				5F301D8521F6EE9500A2E2A4 /* GoogleUtilities.framework in Frameworks */,
-				5F4E73A821F9973D0093438D /* leveldb-library.framework in Frameworks */,
-				5F4E73A421F9973D0093438D /* Protobuf.framework in Frameworks */,
-				5F4E73A521F9973D0093438D /* gRPC-Core.framework in Frameworks */,
-				5F301D9021F6EF1700A2E2A4 /* GTMSessionFetcher.framework in Frameworks */,
-				5F301D8821F6EE9500A2E2A4 /* FirebaseCoreDiagnostics.framework in Frameworks */,
-				5F301D8B21F6EE9500A2E2A4 /* FirebaseCore.framework in Frameworks */,
-				5F301D8A21F6EE9500A2E2A4 /* GoogleAppMeasurement.framework in Frameworks */,
-				5F301D8621F6EE9500A2E2A4 /* nanopb.framework in Frameworks */,
-				5F301D7D21F6EE8000A2E2A4 /* FIRAnalyticsConnector.framework in Frameworks */,
-				5F4E73A921F9973D0093438D /* gRPC-C++.framework in Frameworks */,
+				C9E29D30C6B15EB6F5A6AA10 /* Pods_Recurrent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,46 +258,12 @@
 			path = HomeAddressCell;
 			sourceTree = "<group>";
 		};
-		5F301D7A21F6EE3E00A2E2A4 /* FireBase */ = {
-			isa = PBXGroup;
-			children = (
-				5F301D9121F6EFBE00A2E2A4 /* module.modulemap */,
-				5F301D8C21F6EEF100A2E2A4 /* Auth */,
-				5F301D7B21F6EE4F00A2E2A4 /* Analytics */,
-				5F4E739B21F9973C0093438D /* Firestore */,
-			);
-			path = FireBase;
-			sourceTree = "<group>";
-		};
-		5F301D7B21F6EE4F00A2E2A4 /* Analytics */ = {
-			isa = PBXGroup;
-			children = (
-				5F301D8021F6EE9300A2E2A4 /* FirebaseAnalytics.framework */,
-				5F301D8421F6EE9400A2E2A4 /* FirebaseCore.framework */,
-				5F301D8121F6EE9300A2E2A4 /* FirebaseCoreDiagnostics.framework */,
-				5F301D8221F6EE9400A2E2A4 /* FirebaseInstanceID.framework */,
-				5F301D8321F6EE9400A2E2A4 /* GoogleAppMeasurement.framework */,
-				5F301D7E21F6EE9300A2E2A4 /* GoogleUtilities.framework */,
-				5F301D7F21F6EE9300A2E2A4 /* nanopb.framework */,
-				5F301D7C21F6EE8000A2E2A4 /* FIRAnalyticsConnector.framework */,
-			);
-			path = Analytics;
-			sourceTree = "<group>";
-		};
-		5F301D8C21F6EEF100A2E2A4 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				5F301D8D21F6EF0E00A2E2A4 /* FirebaseAuth.framework */,
-				5F301D8F21F6EF1700A2E2A4 /* GTMSessionFetcher.framework */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
 		5F301D9221F98F6600A2E2A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				5F301D9621F9905F00A2E2A4 /* DatabaseService */,
 				5F301D9321F98F7000A2E2A4 /* DataTypes */,
+				5F4E73B721F9A3BD0093438D /* Router */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -347,35 +279,41 @@
 		5F301D9621F9905F00A2E2A4 /* DatabaseService */ = {
 			isa = PBXGroup;
 			children = (
+				5F4E73B221F9A29B0093438D /* DatabaseDescribable */,
 				5F301D9721F9909D00A2E2A4 /* StringRawRepresentable.swift */,
 				5F301D9921F990DB00A2E2A4 /* FirestroreModel.swift */,
 				5F301DAC21F994E500A2E2A4 /* FirestoreModelData.swift */,
 				5F301DAE21F9957700A2E2A4 /* DocumentReference.swift */,
 				5F301DB021F9958F00A2E2A4 /* Query.swift */,
+				5F4E73B021F9A2510093438D /* DatabaseService.swift */,
 			);
 			path = DatabaseService;
-			sourceTree = "<group>";
-		};
-		5F4E739B21F9973C0093438D /* Firestore */ = {
-			isa = PBXGroup;
-			children = (
-				5F4E73AB21F999940093438D /* gRPCCertificates-Firestore.bundle */,
-				5F4E739C21F9973C0093438D /* Protobuf.framework */,
-				5F4E739D21F9973C0093438D /* gRPC-Core.framework */,
-				5F4E739E21F9973C0093438D /* FirebaseFirestore.framework */,
-				5F4E73A121F9973C0093438D /* leveldb-library.framework */,
-				5F4E73A221F9973C0093438D /* gRPC-C++.framework */,
-				5F4E73A321F9973C0093438D /* BoringSSL.framework */,
-			);
-			path = Firestore;
 			sourceTree = "<group>";
 		};
 		5F4E73AD21F99C310093438D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				5F4E73AE21F99C320093438D /* libz.tbd */,
+				9569B13E7983DC0EA86ED7BF /* Pods_Recurrent.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F4E73B221F9A29B0093438D /* DatabaseDescribable */ = {
+			isa = PBXGroup;
+			children = (
+				5F4E73B321F9A2CC0093438D /* DatabaseSaveDescribable.swift */,
+				5F4E73B521F9A2E80093438D /* DatabaseFetchDescribable.swift */,
+			);
+			path = DatabaseDescribable;
+			sourceTree = "<group>";
+		};
+		5F4E73B721F9A3BD0093438D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				5F4E73B821F9A3E60093438D /* DatabaseRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		5F73EA1121E4628B004E0680 = {
@@ -384,6 +322,7 @@
 				5F73EA1C21E4628B004E0680 /* Recurrent */,
 				5F73EA1B21E4628B004E0680 /* Products */,
 				5F4E73AD21F99C310093438D /* Frameworks */,
+				94AAEE7F1BC9EDA9D6DBBF95 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -404,7 +343,6 @@
 				5F301D5C21F1B20000A2E2A4 /* Views */,
 				5F301D6321F1B64900A2E2A4 /* Protocols */,
 				5F301D9221F98F6600A2E2A4 /* Model */,
-				5F301D7A21F6EE3E00A2E2A4 /* FireBase */,
 				5F73EA1D21E4628B004E0680 /* AppDelegate.swift */,
 				5F73EA1F21E4628B004E0680 /* ViewController.swift */,
 				5F73EA2121E4628B004E0680 /* Main.storyboard */,
@@ -412,6 +350,7 @@
 				5F73EA3521E5B9AF004E0680 /* Fonts */,
 				5F73EA2921E4628D004E0680 /* LaunchScreen.storyboard */,
 				5F73EA2C21E4628D004E0680 /* Info.plist */,
+				5F4E73BC21F9A82D0093438D /* GoogleService-Info.plist */,
 				5F73EA2421E4628B004E0680 /* Recurrent.xcdatamodeld */,
 			);
 			path = Recurrent;
@@ -506,8 +445,18 @@
 				5F73EA9721E5C000004E0680 /* CALayer+Shadow.swift */,
 				5F73EA9B21E9BBCE004E0680 /* Enum+RawRepresentable.swift */,
 				5F73EA9D21EF05B8004E0680 /* UIViewController+Gestures.swift */,
+				5F4E73BA21F9A5CD0093438D /* Error+Initializable.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		94AAEE7F1BC9EDA9D6DBBF95 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				257F6006AE6CC9E1296ABE43 /* Pods-Recurrent.debug.xcconfig */,
+				E60763D3462427251B98C66D /* Pods-Recurrent.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -517,9 +466,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F73EA2F21E4628D004E0680 /* Build configuration list for PBXNativeTarget "Recurrent" */;
 			buildPhases = (
+				179D9604045D393830016450 /* [CP] Check Pods Manifest.lock */,
 				5F73EA1621E4628B004E0680 /* Sources */,
 				5F73EA1721E4628B004E0680 /* Frameworks */,
 				5F73EA1821E4628B004E0680 /* Resources */,
+				98B6BE203C430032734F8DD1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -579,6 +530,7 @@
 				5F73EA5E21E5B9CB004E0680 /* FiraSans-HairItalic.otf in Resources */,
 				5F73EA2B21E4628D004E0680 /* LaunchScreen.storyboard in Resources */,
 				5F73EA7521E5B9CB004E0680 /* FiraSans-Italic.otf in Resources */,
+				5F4E73BD21F9A82E0093438D /* GoogleService-Info.plist in Resources */,
 				5F73EA9321E5BC91004E0680 /* Roboto-Black.ttf in Resources */,
 				5F301D7521F3E12600A2E2A4 /* HomeAddressTableViewCell.xib in Resources */,
 				5F73EA8E21E5BC91004E0680 /* Roboto-Italic.ttf in Resources */,
@@ -617,7 +569,6 @@
 				5F73EA8A21E5BC91004E0680 /* Roboto-MediumItalic.ttf in Resources */,
 				5F73EA8921E5BC91004E0680 /* Roboto-Regular.ttf in Resources */,
 				5F73EA7121E5B9CB004E0680 /* FiraSans-Heavy.otf in Resources */,
-				5F4E73AC21F999940093438D /* gRPCCertificates-Firestore.bundle in Resources */,
 				5F73EA8D21E5BC91004E0680 /* Roboto-LightItalic.ttf in Resources */,
 				5F73EA6221E5B9CB004E0680 /* FiraSans-MediumItalic.otf in Resources */,
 			);
@@ -625,15 +576,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		179D9604045D393830016450 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Recurrent-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98B6BE203C430032734F8DD1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Recurrent/Pods-Recurrent-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Recurrent/Pods-Recurrent-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5F73EA1621E4628B004E0680 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F4E73B921F9A3E60093438D /* DatabaseRouter.swift in Sources */,
 				5F73EA3421E47D73004E0680 /* PhoneNumberViewController.swift in Sources */,
 				5F301D5B21F1AC3E00A2E2A4 /* PersonalDetailsViewController.swift in Sources */,
 				5F73EA2621E4628B004E0680 /* Recurrent.xcdatamodeld in Sources */,
 				5F73EA9621E5BE69004E0680 /* UIView+Corners.swift in Sources */,
+				5F4E73B421F9A2CC0093438D /* DatabaseSaveDescribable.swift in Sources */,
+				5F4E73BB21F9A5CD0093438D /* Error+Initializable.swift in Sources */,
 				5F301D6A21F1B90C00A2E2A4 /* ReusableTableView.swift in Sources */,
 				5F301DB121F9958F00A2E2A4 /* Query.swift in Sources */,
 				5F301D7921F4101700A2E2A4 /* QueueInfoViewController.swift in Sources */,
@@ -641,6 +650,7 @@
 				5F301DAD21F994E500A2E2A4 /* FirestoreModelData.swift in Sources */,
 				5F301D7021F3C06D00A2E2A4 /* Countries.swift in Sources */,
 				5F301D9521F98F8900A2E2A4 /* User.swift in Sources */,
+				5F4E73B621F9A2E80093438D /* DatabaseFetchDescribable.swift in Sources */,
 				5F301D7421F3E12600A2E2A4 /* HomeAddressTableViewCell.swift in Sources */,
 				5F73EA9C21E9BBCE004E0680 /* Enum+RawRepresentable.swift in Sources */,
 				5F301D6821F1B6FD00A2E2A4 /* Reusable.swift in Sources */,
@@ -652,6 +662,7 @@
 				5F301D7721F409A700A2E2A4 /* RegConfirmationViewController.swift in Sources */,
 				5F301D6621F1B6B200A2E2A4 /* NibLoadable.swift in Sources */,
 				5F73EA1E21E4628B004E0680 /* AppDelegate.swift in Sources */,
+				5F4E73B121F9A2510093438D /* DatabaseService.swift in Sources */,
 				5F301D9821F9909D00A2E2A4 /* StringRawRepresentable.swift in Sources */,
 				5F301D9A21F990DB00A2E2A4 /* FirestroreModel.swift in Sources */,
 				5F73EA9821E5C000004E0680 /* CALayer+Shadow.swift in Sources */,
@@ -796,6 +807,7 @@
 		};
 		5F73EA3021E4628D004E0680 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 257F6006AE6CC9E1296ABE43 /* Pods-Recurrent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -820,6 +832,7 @@
 		};
 		5F73EA3121E4628D004E0680 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E60763D3462427251B98C66D /* Pods-Recurrent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

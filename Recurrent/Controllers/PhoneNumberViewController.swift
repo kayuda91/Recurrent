@@ -40,6 +40,8 @@ class PhoneNumberViewController: UIViewController {
         }
     }
     
+    lazy var databaseService = DatabaseService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -61,8 +63,10 @@ class PhoneNumberViewController: UIViewController {
     }
     
     @IBAction func continueRegistration(_ sender: UIButton) {
-        navigateToPersonalDetailsController()
+//        navigateToPersonalDetailsController()
+        fetchUsers()
     }
+
     
     // MARK: - UI configuration
     func configureUI() {
@@ -122,6 +126,16 @@ class PhoneNumberViewController: UIViewController {
     func navigateToPersonalDetailsController() {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PasscodeViewController")
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    // MARK: - Database communication
+    func fetchUsers() {
+        databaseService.fetchUsers(completion: { [weak self] users, error in
+            if let error = error {
+                print("Error")
+            }
+            print("test")
+        })
     }
 }
 
