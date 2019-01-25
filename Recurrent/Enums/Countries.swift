@@ -29,15 +29,15 @@ enum Countries: Int {
         }
     }
     
-    var phoneCode: Int {
+    var phoneCode: String {
         switch self {
-        case .ukraine: return 380
-        case .usa: return 1
-        case .checkRepublic: return 420
-        case .japan: return 81
-        case .uk: return 44
-        case .mexico: return 52
-        case .australia: return 61
+        case .ukraine: return "380"
+        case .usa: return "1"
+        case .checkRepublic: return "420"
+        case .japan: return "81"
+        case .uk: return "44"
+        case .mexico: return "52"
+        case .australia: return "61"
         }
     }
     

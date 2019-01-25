@@ -32,6 +32,7 @@
 		5F4E73B921F9A3E60093438D /* DatabaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4E73B821F9A3E60093438D /* DatabaseRouter.swift */; };
 		5F4E73BB21F9A5CD0093438D /* Error+Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4E73BA21F9A5CD0093438D /* Error+Initializable.swift */; };
 		5F4E73BD21F9A82E0093438D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F4E73BC21F9A82D0093438D /* GoogleService-Info.plist */; };
+		5F596D9921FAAEF10043244F /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F596D9821FAAEF10043244F /* UIAlertController.swift */; };
 		5F73EA1E21E4628B004E0680 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73EA1D21E4628B004E0680 /* AppDelegate.swift */; };
 		5F73EA2021E4628B004E0680 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73EA1F21E4628B004E0680 /* ViewController.swift */; };
 		5F73EA2321E4628B004E0680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F73EA2121E4628B004E0680 /* Main.storyboard */; };
@@ -120,6 +121,7 @@
 		5F4E73B821F9A3E60093438D /* DatabaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRouter.swift; sourceTree = "<group>"; };
 		5F4E73BA21F9A5CD0093438D /* Error+Initializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Initializable.swift"; sourceTree = "<group>"; };
 		5F4E73BC21F9A82D0093438D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5F596D9821FAAEF10043244F /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		5F73EA1A21E4628B004E0680 /* Recurrent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recurrent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F73EA1D21E4628B004E0680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F73EA1F21E4628B004E0680 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -446,6 +448,7 @@
 				5F73EA9B21E9BBCE004E0680 /* Enum+RawRepresentable.swift */,
 				5F73EA9D21EF05B8004E0680 /* UIViewController+Gestures.swift */,
 				5F4E73BA21F9A5CD0093438D /* Error+Initializable.swift */,
+				5F596D9821FAAEF10043244F /* UIAlertController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -666,6 +669,7 @@
 				5F301D9821F9909D00A2E2A4 /* StringRawRepresentable.swift in Sources */,
 				5F301D9A21F990DB00A2E2A4 /* FirestroreModel.swift in Sources */,
 				5F73EA9821E5C000004E0680 /* CALayer+Shadow.swift in Sources */,
+				5F596D9921FAAEF10043244F /* UIAlertController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,10 +23,11 @@ class PhoneNumberViewController: UIViewController {
     
     var countryPickerView = UIPickerView()
     var countryPickerToolbar = UIToolbar()
+    var inputPhoneNumber: String = ""
     
     var selectedCountry = Countries.getCases()[0] {
         didSet {
-            countryCodeButton.setTitle("+" + String(selectedCountry.phoneCode), for: .normal)
+            countryCodeButton.setTitle("+" + selectedCountry.phoneCode, for: .normal)
         }
     }
     
@@ -63,10 +64,21 @@ class PhoneNumberViewController: UIViewController {
     }
     
     @IBAction func continueRegistration(_ sender: UIButton) {
-//        navigateToPersonalDetailsController()
-        fetchUsers()
+        guard phoneNumbertextField.text?.count == selectedCountry.numberLength else {
+            self.showAlert(message: "Please enter valid phone number containing \(selectedCountry.numberLength) digits")
+            return
+        }
+        
+        validatePhoneNumber { success in
+            guard success else {
+                self.showAlert(message: "This phone number is already registered.")
+                return
+            }
+            
+            //TODO: Save new user
+            print("Success")
+        }
     }
-
     
     // MARK: - UI configuration
     func configureUI() {
@@ -76,6 +88,7 @@ class PhoneNumberViewController: UIViewController {
                                        offset: CGSize(width: 5, height: 5),
                                        opacity: 0.5,
                                        radius: 5)
+        configureTextField()
     }
     
     func configurePickerView() {
@@ -122,6 +135,10 @@ class PhoneNumberViewController: UIViewController {
         countryPickerView.removeFromSuperview()
     }
     
+    func configureTextField() {
+        phoneNumbertextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+    }
+    
     // MARK: - Navigation
     func navigateToPersonalDetailsController() {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PasscodeViewController")
@@ -129,12 +146,27 @@ class PhoneNumberViewController: UIViewController {
     }
     
     // MARK: - Database communication
-    func fetchUsers() {
+    func validatePhoneNumber(completion: @escaping (Bool) -> Void) {
         databaseService.fetchUsers(completion: { [weak self] users, error in
-            if let error = error {
-                print("Error")
+            guard let users = users else {
+                 self?.showAlert(message: error?.localizedDescription ?? "Error")
+                return
             }
-            print("test")
+            
+            users.forEach { user in
+                guard let fetchedPhoneNumber = user.phoneNumber, let enteredNumber = self?.inputPhoneNumber,
+                let countryCode = self?.selectedCountry.phoneCode else {
+                    self?.showAlert(message: "Couldn't fetch number")
+                    completion(false)
+                    return
+                }
+                
+                if fetchedPhoneNumber == countryCode + enteredNumber {
+                    completion(false)
+                }
+            }
+            
+            completion(true)
         })
     }
 }
@@ -153,9 +185,26 @@ extension PhoneNumberViewController: UITextFieldDelegate {
         }
         
         phoneNumberTitleLabel.isHidden = range.location < 1 && string == ""
+        
+        let shouldUpdateNumber = !(inputNumber.count > selectedCountry.numberLength && range.length == 0)
         let shouldChangeCharacter = !(inputNumber.count >= selectedCountry.numberLength && range.length == 0)
-        if !shouldChangeCharacter { textField.resignFirstResponder() }
+        
+        if shouldUpdateNumber { inputPhoneNumber = inputNumber + string }
+        if !shouldChangeCharacter {
+            textField.resignFirstResponder()
+        }
+        
         return shouldChangeCharacter
+    }
+    
+    @objc func textFieldDidChange(textField: UITextField) {
+        guard let inputNumber = textField.text else {
+            return
+        }
+        
+        if inputNumber.count >= selectedCountry.numberLength {
+            textField.resignFirstResponder()
+        }
     }
 }
 
@@ -172,6 +221,6 @@ extension PhoneNumberViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let sortedCountries = Countries.getCases().sorted {$0.name < $1.name}
         let country = sortedCountries[row]
-        return "+" + String(country.phoneCode) + " " + country.name
+        return "+" + country.phoneCode + " " + country.name
     }
 }
