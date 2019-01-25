@@ -18,8 +18,8 @@ class PhoneNumberViewController: UIViewController {
     @IBOutlet weak var phoneNumbertextField: UITextField!
     @IBOutlet weak var phoneNumberTitleLabel: UILabel!
     @IBOutlet weak var phoneNumberUnderlineLabel: UILabel!
-    
     @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var countryPickerView = UIPickerView()
     var countryPickerToolbar = UIToolbar()
@@ -64,13 +64,16 @@ class PhoneNumberViewController: UIViewController {
     }
     
     @IBAction func continueRegistration(_ sender: UIButton) {
+        activityIndicator.startAnimating()
         guard phoneNumbertextField.text?.count == selectedCountry.numberLength else {
+            activityIndicator.stopAnimating()
             self.showAlert(message: "Please enter valid phone number containing \(selectedCountry.numberLength) digits")
             return
         }
         
         validatePhoneNumber { success in
             guard success else {
+                self.activityIndicator.stopAnimating()
                 self.showAlert(message: "This phone number is already registered.")
                 return
             }
@@ -168,6 +171,10 @@ class PhoneNumberViewController: UIViewController {
             
             completion(true)
         })
+    }
+    
+    func savePhoneNumber(completion: @escaping (Bool) -> Void) {
+        
     }
 }
 

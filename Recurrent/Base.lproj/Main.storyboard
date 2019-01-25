@@ -116,6 +116,10 @@
                                     <constraint firstAttribute="width" constant="12" id="Ngk-hQ-jgA"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="uQd-F6-OEB">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.25098039220000001" green="0.53333333329999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -136,10 +140,12 @@
                             <constraint firstItem="BHJ-c4-GKI" firstAttribute="leading" secondItem="MN2-SR-4wF" secondAttribute="leading" id="VzT-N6-IVN"/>
                             <constraint firstItem="sqJ-WF-MjL" firstAttribute="trailing" secondItem="MN2-SR-4wF" secondAttribute="trailing" id="WPl-iw-JGK"/>
                             <constraint firstItem="uN9-cB-3Xl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="ahG-IC-tMf"/>
+                            <constraint firstItem="uQd-F6-OEB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bar-Mj-tNl"/>
                             <constraint firstItem="MN2-SR-4wF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eLD-la-yUR"/>
                             <constraint firstItem="LIz-BV-oN1" firstAttribute="trailing" secondItem="LzU-EA-q8p" secondAttribute="trailing" id="eLx-NZ-7ti"/>
                             <constraint firstItem="MN2-SR-4wF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="fV5-Jl-j0K"/>
                             <constraint firstItem="Fef-Sd-v7u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fXw-7u-QmO"/>
+                            <constraint firstItem="uQd-F6-OEB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p9b-Yr-4c6"/>
                             <constraint firstItem="LIz-BV-oN1" firstAttribute="leading" secondItem="LzU-EA-q8p" secondAttribute="leading" id="sef-w2-CcY"/>
                             <constraint firstItem="uN9-cB-3Xl" firstAttribute="top" secondItem="Vso-vp-k09" secondAttribute="bottom" constant="32" id="tba-UK-F3b"/>
                             <constraint firstItem="LzU-EA-q8p" firstAttribute="height" secondItem="MN2-SR-4wF" secondAttribute="height" id="twH-rO-bZZ"/>
@@ -151,6 +157,7 @@
                     <navigationItem key="navigationItem" id="cE3-vV-JKN"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="uQd-F6-OEB" id="uyb-YE-cJy"/>
                         <outlet property="continueButton" destination="uN9-cB-3Xl" id="zwr-Qo-CL5"/>
                         <outlet property="countryCodeButton" destination="MN2-SR-4wF" id="FBU-j9-o7I"/>
                         <outlet property="countryScoreUnderlineLabel" destination="BHJ-c4-GKI" id="Deu-Ft-ygX"/>
