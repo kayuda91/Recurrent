@@ -63,4 +63,9 @@ extension PersonalDetailsTableViewCell: UITextFieldDelegate {
         if !shouldChangeCharacter { textField.resignFirstResponder() }
         return shouldChangeCharacter
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

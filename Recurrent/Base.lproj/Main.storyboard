@@ -638,6 +638,10 @@
                                     <outlet property="delegate" destination="lC1-e0-8Z5" id="iFp-wF-VGf"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="xUE-AB-b9B">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.25098039220000001" green="0.53333333329999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -646,7 +650,9 @@
                             <constraint firstItem="E7p-hf-XQk" firstAttribute="trailing" secondItem="7f8-71-KpM" secondAttribute="trailing" id="C3u-D0-3gR"/>
                             <constraint firstItem="7f8-71-KpM" firstAttribute="top" secondItem="ZxQ-Dl-0UM" secondAttribute="bottom" constant="60" id="EpQ-XS-Msq"/>
                             <constraint firstItem="pYz-Pw-ptI" firstAttribute="top" secondItem="7f8-71-KpM" secondAttribute="bottom" constant="60" id="KyA-UG-och"/>
+                            <constraint firstItem="xUE-AB-b9B" firstAttribute="centerX" secondItem="5WW-gO-pht" secondAttribute="centerX" id="OE4-AW-OYJ"/>
                             <constraint firstItem="42m-hz-rSK" firstAttribute="leading" secondItem="5WW-gO-pht" secondAttribute="leading" id="OYO-CX-Q1g"/>
+                            <constraint firstItem="xUE-AB-b9B" firstAttribute="centerY" secondItem="5WW-gO-pht" secondAttribute="centerY" id="QEL-cg-Lhc"/>
                             <constraint firstItem="ZxQ-Dl-0UM" firstAttribute="centerX" secondItem="5WW-gO-pht" secondAttribute="centerX" id="QIg-WP-425"/>
                             <constraint firstAttribute="trailing" secondItem="pYz-Pw-ptI" secondAttribute="trailing" constant="25" id="eLR-wZ-95V"/>
                             <constraint firstItem="ZxQ-Dl-0UM" firstAttribute="top" secondItem="42m-hz-rSK" secondAttribute="bottom" constant="30" id="eoD-ct-dwV"/>
@@ -657,6 +663,7 @@
                         <viewLayoutGuide key="safeArea" id="E7p-hf-XQk"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="xUE-AB-b9B" id="Tap-G9-I0r"/>
                         <outlet property="continueButton" destination="pYz-Pw-ptI" id="qmX-a7-ocp"/>
                         <outlet property="tableView" destination="7f8-71-KpM" id="9zP-Z5-UVE"/>
                     </connections>

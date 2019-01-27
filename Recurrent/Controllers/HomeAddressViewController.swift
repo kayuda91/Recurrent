@@ -7,19 +7,25 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeAddressViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var addressSections = AddressSectionType.getCases()
     var selectedCountry = Countries.usa
     var selectedState: String?
+    var zipCode: String?
+    var addressLine1: String?
+    var addressLine2: String?
+    var city: String?
     
     var pickerView = UIPickerView()
     var pickerToolbar = UIToolbar()
-    
     var isPickerForCountries: Bool = true
+    lazy var databaseService = DatabaseService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +41,13 @@ class HomeAddressViewController: UIViewController {
     }
     
     @IBAction func continueRegistration(_ sender: UIButton) {
-        navigateToRegConfirmationVC()
+        guard zipCode != nil, addressLine1 != nil, city != nil,
+            zipCode != "", addressLine1 != "", city != "" else {
+                showAlert(message: "Please fill up all required fields")
+                return
+        }
+        
+        saveInfo()
     }
     
     // MARK: - UI Configuration
@@ -113,6 +125,47 @@ class HomeAddressViewController: UIViewController {
     func configureTableView() {
         tableView.register(PersonalDetailsTableViewCell.self)
         tableView.register(HomeAddressTableViewCell.self)
+    }
+}
+
+// MARK: - API Communication methods
+extension HomeAddressViewController {
+    func saveInfo() {
+        activityIndicator.startAnimating()
+        databaseService.signInAnonymously { user, error in
+            let defaults = UserDefaults.standard
+            guard let user = user,
+                let phoneNumber = defaults.object(forKey: UserDefaultKeys.phoneNumber) as? String,
+                let firstName = defaults.object(forKey: UserDefaultKeys.firstName) as? String,
+                let lastName = defaults.object(forKey: UserDefaultKeys.lastName) as? String,
+                let passcode = defaults.object(forKey: UserDefaultKeys.passcode) as? String else {
+                    self.activityIndicator.stopAnimating()
+                self.showAlert(message: error?.localizedDescription ?? "Couldn't fetch user data")
+                return
+            }
+            
+            user.phoneNumber = phoneNumber
+            user.passcode = passcode
+            user.firstName = firstName
+            user.lastName = lastName
+            user.country = self.selectedCountry.name
+            user.zipCode = self.zipCode
+            user.addressLine1 = self.addressLine1
+            user.addressLine2 = self.addressLine2
+            user.city = self.city
+            user.state = self.selectedState
+            
+            self.databaseService.save(user: user, completion: { success, error in
+                guard success else {
+                    self.activityIndicator.stopAnimating()
+                    self.showAlert(message: error?.localizedDescription ?? "Couldn't save user info")
+                    return
+                }
+                
+                self.activityIndicator.stopAnimating()
+                self.navigateToRegConfirmationVC()
+            })
+        }
     }
 }
 
@@ -202,8 +255,33 @@ private extension HomeAddressViewController {
         cell.title = section.title
         cell.isNumericOnly = section.isNumericOnly
         
+        let editedSection = self.addressSections[indexPath.section]
+        switch editedSection {
+        case .zipCode:
+            cell.inputValue = zipCode
+        case .addressLine1:
+            cell.inputValue = addressLine1
+        case .addressLine2:
+            cell.inputValue = addressLine2
+        case .city:
+            cell.inputValue = city
+        default:
+            break
+        }
+        
         cell.textFieldEndEditing = { text in
-            //TODO: Save info
+            switch editedSection {
+            case .zipCode:
+                self.zipCode = text
+            case .addressLine1:
+                self.addressLine1 = text
+            case .addressLine2:
+                self.addressLine2 = text
+            case .city:
+                self.city = text
+            default:
+                break
+            }
         }
         
         return cell
