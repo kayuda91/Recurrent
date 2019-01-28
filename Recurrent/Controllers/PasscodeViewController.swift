@@ -13,7 +13,7 @@ class PasscodeViewController: UIViewController {
     @IBOutlet weak var createPasscodeTitle: UILabel!
     @IBOutlet weak var filledPasscodeStackview: UIStackView!
     
-    var passcode = [Int]() {
+    var passcode = String() {
         didSet {
             updateFilledPasscodeCircles()
         }
@@ -40,7 +40,7 @@ class PasscodeViewController: UIViewController {
         if sender.tag == 10 && passcode.count > 0 {
             passcode.removeLast()
         } else if sender.tag != 10 && passcode.count < 4 {
-            passcode.append(sender.tag)
+            passcode.append(String(sender.tag))
         }
         
         if passcode.count == 4 {

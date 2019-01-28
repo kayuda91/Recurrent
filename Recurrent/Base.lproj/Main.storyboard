@@ -767,7 +767,7 @@
                                                     <constraint firstAttribute="width" constant="200" id="9hz-kU-HI4"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You're on the list, Anton!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="dJS-03-4dP">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You're on the list!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="dJS-03-4dP">
                                                 <rect key="frame" x="37.5" y="300" width="300" height="26.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="300" id="0UB-5H-Lg0"/>
@@ -776,8 +776,12 @@
                                                 <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="74,949" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="FTu-hb-Dtm">
-                                                <rect key="frame" x="101" y="351.5" width="173" height="77"/>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="LsU-dm-KKG">
+                                                <rect key="frame" x="169" y="387.5" width="37" height="37"/>
+                                                <color key="color" red="0.25098039220000001" green="0.53333333329999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </activityIndicatorView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="FTu-hb-Dtm">
+                                                <rect key="frame" x="169.5" y="351.5" width="36" height="77"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="64"/>
                                                 <color key="textColor" red="0.25098039215686274" green="0.53333333333333333" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -788,8 +792,8 @@
                                                 <color key="textColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="jYt-sS-ziv">
-                                                <rect key="frame" x="172.5" y="480.5" width="30" height="34"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="jYt-sS-ziv">
+                                                <rect key="frame" x="179.5" y="480.5" width="16" height="34"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="28"/>
                                                 <color key="textColor" red="0.25098039220000001" green="0.53333333329999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -830,12 +834,14 @@
                                             <constraint firstItem="pSP-oP-rab" firstAttribute="top" secondItem="Mer-Tu-ZZ9" secondAttribute="bottom" constant="32" id="Qj5-NQ-lDE"/>
                                             <constraint firstItem="Mer-Tu-ZZ9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bQT-xk-3ug" secondAttribute="leading" constant="5" id="QzE-hb-G7V"/>
                                             <constraint firstItem="dJS-03-4dP" firstAttribute="top" secondItem="gJa-Lo-GYr" secondAttribute="bottom" constant="50" id="Z5K-Iz-XWh"/>
+                                            <constraint firstItem="LsU-dm-KKG" firstAttribute="centerX" secondItem="bQT-xk-3ug" secondAttribute="centerX" id="Zr6-ok-aIm"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Mer-Tu-ZZ9" secondAttribute="trailing" constant="5" id="anv-s2-wz1"/>
                                             <constraint firstAttribute="trailing" secondItem="pSP-oP-rab" secondAttribute="trailing" constant="25" id="baJ-EQ-TQH"/>
                                             <constraint firstItem="Mer-Tu-ZZ9" firstAttribute="centerX" secondItem="bQT-xk-3ug" secondAttribute="centerX" id="dF9-EW-9as"/>
                                             <constraint firstItem="FTu-hb-Dtm" firstAttribute="centerX" secondItem="bQT-xk-3ug" secondAttribute="centerX" id="fRS-70-1h1"/>
                                             <constraint firstItem="tLQ-MA-SA2" firstAttribute="top" secondItem="FTu-hb-Dtm" secondAttribute="bottom" constant="10" id="gJS-d3-CCs"/>
                                             <constraint firstAttribute="height" constant="812" id="gdO-jh-2N9"/>
+                                            <constraint firstItem="LsU-dm-KKG" firstAttribute="centerY" secondItem="bQT-xk-3ug" secondAttribute="centerY" id="heo-Wl-QbU"/>
                                             <constraint firstItem="FTu-hb-Dtm" firstAttribute="top" secondItem="dJS-03-4dP" secondAttribute="bottom" constant="25" id="iJv-Hj-LDU"/>
                                             <constraint firstItem="Mer-Tu-ZZ9" firstAttribute="top" secondItem="hhp-MG-Nwq" secondAttribute="bottom" constant="35" id="ic6-S7-VaV"/>
                                             <constraint firstItem="dJS-03-4dP" firstAttribute="centerX" secondItem="bQT-xk-3ug" secondAttribute="centerX" id="ojp-FC-TQK"/>
@@ -866,6 +872,7 @@
                     </view>
                     <size key="freeformSize" width="375" height="812"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="LsU-dm-KKG" id="QBe-xJ-kwM"/>
                         <outlet property="bumpUpQueueButton" destination="pSP-oP-rab" id="Nfa-ub-RD5"/>
                         <outlet property="firstNameLabel" destination="dJS-03-4dP" id="jfp-5B-jV8"/>
                         <outlet property="peopleAheadLabel" destination="FTu-hb-Dtm" id="KL9-3H-5wF"/>

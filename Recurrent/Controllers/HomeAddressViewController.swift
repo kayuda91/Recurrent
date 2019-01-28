@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class HomeAddressViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -132,7 +133,17 @@ class HomeAddressViewController: UIViewController {
 extension HomeAddressViewController {
     func saveInfo() {
         activityIndicator.startAnimating()
-        databaseService.signInAnonymously { user, error in
+        if UserDefaults.standard.value(forKey: UserDefaultKeys.userSignedIn) == nil && Auth.auth().currentUser != nil {
+            databaseService.signOut { success, error in
+                guard success else {
+                    self.activityIndicator.stopAnimating()
+                    self.showAlert(message: error?.localizedDescription ?? "Couldn't sign out previous user")
+                    return
+                }
+            }
+        }
+        
+        self.databaseService.signInAnonymously { user, error in
             let defaults = UserDefaults.standard
             guard let user = user,
                 let phoneNumber = defaults.object(forKey: UserDefaultKeys.phoneNumber) as? String,
@@ -140,8 +151,8 @@ extension HomeAddressViewController {
                 let lastName = defaults.object(forKey: UserDefaultKeys.lastName) as? String,
                 let passcode = defaults.object(forKey: UserDefaultKeys.passcode) as? String else {
                     self.activityIndicator.stopAnimating()
-                self.showAlert(message: error?.localizedDescription ?? "Couldn't fetch user data")
-                return
+                    self.showAlert(message: error?.localizedDescription ?? "Couldn't fetch user data")
+                    return
             }
             
             user.phoneNumber = phoneNumber
@@ -154,6 +165,7 @@ extension HomeAddressViewController {
             user.addressLine2 = self.addressLine2
             user.city = self.city
             user.state = self.selectedState
+            user.createdAt = Timestamp(date: Date())
             
             self.databaseService.save(user: user, completion: { success, error in
                 guard success else {
@@ -162,6 +174,7 @@ extension HomeAddressViewController {
                     return
                 }
                 
+                defaults.set(true, forKey: UserDefaultKeys.userSignedIn)
                 self.activityIndicator.stopAnimating()
                 self.navigateToRegConfirmationVC()
             })

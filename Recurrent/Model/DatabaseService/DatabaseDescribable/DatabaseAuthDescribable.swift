@@ -17,4 +17,5 @@ protocol DatabaseAuthDescribable: class {
 // MARK: - Callbacks
 extension DatabaseAuthDescribable {
     typealias AuthSignInCallback = (User?, Error?) -> Void
+    typealias AuthSignOutCallback = (Bool, Error?) -> Void
 }

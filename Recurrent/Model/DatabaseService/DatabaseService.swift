@@ -56,6 +56,15 @@ extension DatabaseService {
             completion?(User(identifier: userId), error)
         }
     }
+    
+    func signOut(completion: DatabaseAuthDescribable.AuthSignOutCallback?) {
+        do {
+            try Auth.auth().signOut()
+            completion?(true, nil)
+        } catch let error {
+            completion?(false, error)
+        }
+    }
 }
 
 // MARK: - DatabaseSaveDescribable
@@ -84,6 +93,15 @@ extension DatabaseService {
     func fetchUsers(completion: DatabaseFetchDescribable.FetchUsersCallback?) {
         router
         .usersCollectionRoute()
+            .getObjects(User.self) { users, error in
+                completion?(users, error)
+        }
+    }
+    
+    func fetchUsersSortedByDate(completion: DatabaseFetchDescribable.FetchUsersCallback?) {
+        router
+            .usersCollectionRoute()
+            .order(by: User.Field.createdAt.stringRawValue, descending: false)
             .getObjects(User.self) { users, error in
                 completion?(users, error)
         }

@@ -9,6 +9,7 @@
 import Foundation
 
 struct UserDefaultKeys {
+    static let userSignedIn = "userSignedIn"
     static let phoneNumber = "phoneNumber"
     static let passcode = "passcode"
     static let firstName = "firstName"

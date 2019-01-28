@@ -37,7 +37,7 @@ final class User {
             values[Field.passcode.stringRawValue] = passcode
         }
         
-        if let firstName = passcode {
+        if let firstName = firstName {
             values[Field.firstName.stringRawValue] = firstName
         }
         
@@ -57,7 +57,7 @@ final class User {
             values[Field.addressLine1.stringRawValue] = addressLine1
         }
         
-        if let addressLine2 = addressLine1 {
+        if let addressLine2 = addressLine2 {
             values[Field.addressLine2.stringRawValue] = addressLine2
         }
         

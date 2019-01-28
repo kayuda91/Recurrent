@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Firebase
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        
+        let db = Firestore.firestore()
+        let settings = db.settings
+        settings.areTimestampsInSnapshotsEnabled = true
+        db.settings = settings
+        
+        verifyCurrentUser()
+        
         return true
+    }
+    
+    func verifyCurrentUser() {
+        if UserDefaults.standard.value(forKey: UserDefaultKeys.userSignedIn) != nil && Auth.auth().currentUser != nil {
+            setupQueueVC()
+        }
+    }
+    
+    func setupQueueVC() {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let queueVC = storyboard.instantiateViewController(withIdentifier: "QueueInfoViewController")
+        
+        self.window?.rootViewController = queueVC
+        self.window?.makeKeyAndVisible()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
