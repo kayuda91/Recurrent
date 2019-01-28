@@ -34,7 +34,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your phone number" adjustsFontForContentSizeCategory="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="LzU-EA-q8p">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your phone number" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="LzU-EA-q8p">
                                 <rect key="frame" x="103" y="318.5" width="246" height="30"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="18"/>
@@ -73,7 +73,7 @@
                                     <constraint firstAttribute="width" constant="61" id="sxS-4c-QFZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="18"/>
-                                <state key="normal" title="+380">
+                                <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -101,13 +101,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImG-j7-Ahj">
-                                <rect key="frame" x="26" y="295.5" width="50" height="17"/>
+                                <rect key="frame" x="26" y="295.5" width="61" height="17"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYc-Mm-tPX">
-                                <rect key="frame" x="103" y="295.5" width="93.5" height="17"/>
+                                <rect key="frame" x="103" y="295.5" width="246" height="17"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
                                 <color key="textColor" red="0.25098039220000001" green="0.53333333329999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -135,6 +135,7 @@
                             <constraint firstItem="sqJ-WF-MjL" firstAttribute="centerY" secondItem="MN2-SR-4wF" secondAttribute="centerY" id="BCB-rn-ft0"/>
                             <constraint firstItem="BHJ-c4-GKI" firstAttribute="top" secondItem="MN2-SR-4wF" secondAttribute="bottom" id="Czq-gz-8wU"/>
                             <constraint firstItem="LzU-EA-q8p" firstAttribute="leading" secondItem="MN2-SR-4wF" secondAttribute="trailing" constant="16" id="Fgd-8C-mUc"/>
+                            <constraint firstItem="ImG-j7-Ahj" firstAttribute="trailing" secondItem="BHJ-c4-GKI" secondAttribute="trailing" id="LP8-PU-dAE"/>
                             <constraint firstItem="ImG-j7-Ahj" firstAttribute="leading" secondItem="MN2-SR-4wF" secondAttribute="leading" id="Qbg-eV-ani"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LzU-EA-q8p" secondAttribute="trailing" constant="26" id="SeZ-0B-uJi"/>
                             <constraint firstItem="LzU-EA-q8p" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Urk-6k-0bU"/>
@@ -149,6 +150,7 @@
                             <constraint firstItem="MN2-SR-4wF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="fV5-Jl-j0K"/>
                             <constraint firstItem="Fef-Sd-v7u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fXw-7u-QmO"/>
                             <constraint firstItem="uQd-F6-OEB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p9b-Yr-4c6"/>
+                            <constraint firstItem="JYc-Mm-tPX" firstAttribute="trailing" secondItem="LIz-BV-oN1" secondAttribute="trailing" id="quB-ht-NDd"/>
                             <constraint firstItem="LIz-BV-oN1" firstAttribute="leading" secondItem="LzU-EA-q8p" secondAttribute="leading" id="sef-w2-CcY"/>
                             <constraint firstItem="uN9-cB-3Xl" firstAttribute="top" secondItem="Vso-vp-k09" secondAttribute="bottom" constant="32" id="tba-UK-F3b"/>
                             <constraint firstItem="LzU-EA-q8p" firstAttribute="height" secondItem="MN2-SR-4wF" secondAttribute="height" id="twH-rO-bZZ"/>
