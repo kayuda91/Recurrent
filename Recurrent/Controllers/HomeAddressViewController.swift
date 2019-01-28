@@ -48,6 +48,11 @@ class HomeAddressViewController: UIViewController {
                 return
         }
         
+        if let zipCode = zipCode, zipCode.count < 5 {
+            showAlert(message: "Please enter 5 digits long zipCode")
+            return
+        }
+        
         saveInfo()
     }
     

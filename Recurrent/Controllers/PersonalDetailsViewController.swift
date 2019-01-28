@@ -98,6 +98,7 @@ extension PersonalDetailsViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath, with: PersonalDetailsTableViewCell.self)
         cell.title = detailsSections[indexPath.section].title
+        cell.inputValue = indexPath.section == 0 ? firstName : lastName
         
         cell.textFieldEndEditing = { text in
             if indexPath.section == 0 {
